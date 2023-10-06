@@ -1,0 +1,12 @@
+<div class="article-list-menu" *ngIf="menuList">
+    <div class="content my-container">
+        <ng-container *ngFor="let menu of menuList; let i = index">
+            <button 
+                [ngClass]="menu.state ? 'active':''"
+                (click)="getBlogsByCategoryId(menu.rubrique_id, i)"
+            >
+                {{menu.rubrique_title}}
+            </button>
+        </ng-container>
+    </div>
+</div>

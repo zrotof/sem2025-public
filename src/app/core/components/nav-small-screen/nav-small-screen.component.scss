@@ -1,0 +1,105 @@
+.navigation-small-screen{
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    
+    ul{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        list-style: none;
+
+        li{
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            a{
+                text-decoration: none;
+                width: fit-content;
+                padding: 5px 5px 5px 25px;
+                color: white;
+                display: flex;
+                align-items: center;
+                transition: all 0.3s ease-in-out;
+                border-radius: 25px;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: #9a261f;
+                }
+
+                span{
+                    font-size: 1em;
+                }
+
+                i{
+                    margin-left: 15px;
+                    font-size: 1.15em;
+                    padding: 7px 7px 6px 7px;
+                    border-radius: 50%;
+                    background-color: white;
+                    color: #9a261f;
+                }
+            }
+
+            .active-link{
+                background-color: #9a261f;
+            }
+        }
+    }
+
+    .networks-bloc{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-end;
+        margin-top: 35px;
+
+        p{
+            color: white;
+        }
+
+        .networks{
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            border-top: 1px solid white;
+            padding-top: 20px;
+            margin-top: 10px;
+
+            .pi{
+                color: #fafafa;
+                font-size: 25px;
+                margin: 0 15px;
+                transition: all 0.2s ease-in;
+                cursor: pointer;
+            }
+
+            .pi-facebook:hover{
+                color: #006ae4;
+            }
+
+            .pi-youtube:hover{
+                color: #e93f33;
+            }
+
+            .pi-instagram:hover{
+                color: #944aba;
+            }
+
+            .pi-linkedin:hover{
+                color: #1166c2;
+            }
+
+            .pi-twitter:hover{
+                color: #3ba2f3;
+            }
+
+        }
+    }
+}

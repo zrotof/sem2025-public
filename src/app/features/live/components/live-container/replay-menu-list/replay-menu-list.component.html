@@ -1,0 +1,19 @@
+<div class="replay-menu-list">
+    <div class="content my-container">
+        <h2>
+            <span>Accédez Aux</span>
+            <span>Replays des Émissions Précédentes</span>
+        </h2>
+
+        <div class="replay-menu-list">
+            <ng-container *ngFor="let replayMenu of replayMenuList; let i = index">
+                <button 
+                    [ngClass]="replayMenu.state ? 'active':''"
+                    (click)="getReplayListByReplayCategoryId(replayMenu.id, i)"
+                >
+                    {{replayMenu.label}}
+                </button>
+            </ng-container>
+        </div>
+    </div>
+</div>

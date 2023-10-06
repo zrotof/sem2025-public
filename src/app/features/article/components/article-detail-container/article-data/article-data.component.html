@@ -1,0 +1,19 @@
+<div class="article-content" *ngIf="data">
+    <div class="date">
+        <fa-icon [icon]=" 'faCalendarDays' | convertStringLabelToFontawesomeIcon"></fa-icon> 
+        <span>{{data!.date | convertTimeZoneToDate}}</span> 
+    </div>
+    <h2 class="title"> {{data.title}} </h2>
+    <div class="media">
+        <ng-container *ngIf="data.mediaType != videoTypeEnum  ; else video">
+            <img src={{data.media}} alt={{data.title}}>
+        </ng-container>
+    
+        <ng-template #video>
+            <p>Video</p>
+        </ng-template>
+    </div>
+
+    <div class="data" [innerHtml]="data.description"></div>
+    
+</div>

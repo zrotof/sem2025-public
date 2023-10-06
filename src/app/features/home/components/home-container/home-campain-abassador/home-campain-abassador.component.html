@@ -1,0 +1,44 @@
+<div class="home-campain-abassador">
+    <div class="content my-container">
+        <div class="texts-bloc">
+            <h3>
+                <span>Devenir</span>
+                <span>Ambassadeur De Campagne</span>
+            </h3>
+            <p>Passez à l'action et devenez un Ambassadeur de Campagne. Rejoignez notre communauté passionnée, partagez notre vision, soyez le moteur du changement. Rejoignez-nous maintenant !</p>
+            <button routerLink="">
+                <span>En Savoir Plus</span>
+                <i class="pi pi-arrow-up-right"></i>
+            </button>
+        </div>
+
+        <form [formGroup]="camPainAmbassadorForm" (submit)="onCampainAmbassadorForm()">
+            <div class="input-bloc">
+                <label>Nom</label>
+                <input type="text" placeholder="Entrez votre nom">
+                <small *ngIf="formControls['lastname'].invalid && isFormSubmitted " class="error-feedback">Nom manquant</small>
+            </div>
+
+            <div class="input-bloc">
+                <label>Prénom</label>
+                <input type="text" placeholder="Entrez votre prénom">
+                <small *ngIf="formControls['firstname'].invalid && isFormSubmitted " class="error-feedback">Prénom manquant</small>
+            </div>
+
+            <div class="input-bloc">
+                <label>Email</label>
+                <input type="text" placeholder="Entrez votre email">
+                <small *ngIf="formControls['email'].invalid && isFormSubmitted" class="error-feedback">Adresse mail manquante</small>
+            </div>
+
+            <div class="input-bloc">
+                <label>Ville (champ optionnel)</label>
+                <input type="text" placeholder="Entrez votre ville">
+            </div>
+
+            <button type="submit">
+                S'impliquer
+            </button>
+        </form>
+    </div>
+</div>

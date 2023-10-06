@@ -1,0 +1,64 @@
+.article-item{
+    width: 270px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    position: relative;
+
+    &::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 220px;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.15);
+        top: 0;
+        left: 0;
+    }
+
+    img{
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        object-position: top center;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+
+    h4{
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        margin-bottom: 5px;
+        font-size: 1.2rem;
+    }
+
+    p{
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        font-size: 0.92rem;
+    }
+
+    span{
+        position: absolute;
+        top: 180px;
+        right: 10px;
+        background-color: white;
+        color: black;
+        padding: 6px 12px;
+        font-size: 0.9rem;
+        border-radius: 3px;
+        z-index: 1;
+    }
+
+    fa-icon{
+        color: red;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        font-size: 1.4rem;
+        z-index: 1;
+    }
+}

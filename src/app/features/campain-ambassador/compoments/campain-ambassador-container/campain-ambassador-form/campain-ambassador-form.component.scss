@@ -1,0 +1,91 @@
+.campain-ambassador-form{
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 8rem;
+
+    .content{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--project-primary-color);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 10px;
+
+        img{
+            width: 400px;
+            height: 500px;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+
+        form{
+            width: 450px;
+            background-color: white;
+            margin-left: 50px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: fit-content;
+
+            .input-bloc{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 25px;
+                width: 100%;
+
+                label{
+                    margin-bottom: 5px;
+                    font-size: 0.85rem;
+                    font-weight: 550;
+                    color: #333333;
+                }
+
+                input{
+                    width: 100%;
+                    height: 37px;
+                    background-color: var(--project-secondary-color);
+                    border: 1px solid #94928a;
+                    border-radius: 7px;
+                    padding: 7px 10px;
+                }
+            }
+
+            button{
+                display: flex;
+                align-items: center;
+                padding: 7px 20px;
+                color: white;
+                background-color: var(--project-primary-color);
+                border: none;
+                width: fit-content;
+                border-radius: 5px;
+                cursor: pointer;
+
+                &:hover{
+
+                    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;                         
+                    
+                    i{    
+                            transform: rotate(45deg);
+                    }
+                }
+
+                span{
+                    font-size: 1rem;
+                }
+
+                i{
+                    margin-left: 7px;
+                    font-size: 1.2rem;
+                    transition: all 0.2s ease-out;
+                }
+            }
+        }
+        
+    }
+}

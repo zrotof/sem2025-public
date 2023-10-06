@@ -1,0 +1,25 @@
+.article-detail{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    app-secondary-hero{
+        width: 100%;
+    }
+
+    .content{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 6rem;
+
+        app-article-data{
+            width: fit-content;
+        }
+
+        app-article-detail-side-block{
+            width: fit-content;
+        }
+    }
+}

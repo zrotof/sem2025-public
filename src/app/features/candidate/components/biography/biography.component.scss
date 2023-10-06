@@ -1,0 +1,86 @@
+.biography-bloc{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .title{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 100px;
+
+            h2{
+                color: var(--project-primary-color);
+                margin-bottom: 30px;
+                font-size: 2.5rem;
+            }
+
+            p{
+                line-height: 23px;
+                text-align: center;
+            }
+        }
+
+        .biography-elements{
+            display: flex;
+            flex-direction: column;
+
+            .biography-element{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                margin-bottom: 80px;
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+
+                img{
+                    object-fit: cover;
+                    object-position: top center;
+                    width: 20rem;
+                    height: 15rem;
+                    margin-right: 3rem;
+                    border-radius: 5px;
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                }
+
+                .texts{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    h3{
+                        color: var(--project-primary-color);
+                        margin-bottom: 15px;
+                        font-size: 1.4rem;
+                    }
+
+                    p{
+                        line-height: 23px;
+                        margin-bottom: 5px;
+                        font-size: 0.92rem;
+                        color: var(--project-font-black);
+                    }
+                }
+            }
+
+            .reverse{
+                flex-direction: row-reverse;
+
+                img{
+                    margin-right: 0;
+                    margin-left: 3rem;
+
+                }
+            }
+
+
+        }
+    }
+}

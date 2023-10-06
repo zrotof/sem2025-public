@@ -1,0 +1,25 @@
+<div class="home-last-news">
+    <div class="content my-container">
+        <h2>
+            <span>Consulter Les</span>
+            <span>Dernières Actualités</span>
+        </h2>
+
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque explicabo perspiciatis odit quaerat. Ad quis vitae placeat expedita. Inventore cum dolorum consequatur asperiores, fuga autem quos suscipit rem tempore vel.</p>
+
+        <div class="navigation">
+            <button class="prev">
+                <i class="pi pi-arrow-left"></i>
+            </button>
+            <button>
+                <i class="pi pi-arrow-right"></i>
+            </button>
+        </div>
+        
+        <p-carousel [value]="lastNews" styleClass="custom-carousel" [numVisible]="4" [numScroll]="1" [circular]="true" [autoplayInterval]="7000" [responsiveOptions]="responsiveOptions">
+            <ng-template let-new pTemplate="item">
+                <app-new-item-no-descritpion [article]="new"></app-new-item-no-descritpion>
+            </ng-template>
+        </p-carousel>
+    </div>
+</div>

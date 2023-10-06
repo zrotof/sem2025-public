@@ -1,0 +1,17 @@
+<div class="program-list">
+    <div class="content my-container">
+        <div class="title">
+            <h2>Mon Équipe De Campagne</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime nulla molestiae aspernatur hic exercitationem est illo illum enim maiores quaerat cupiditate, voluptatum distinctio eius sint amet nesciunt non atque magni.</p>
+        </div>
+
+        <div class="programs">
+            <ng-container *ngFor="let program of programs; let i = index">
+                <div class="program" routerLink={{program.link}}>
+                    <img src={{program.sourceImg}} alt={{program.title}}>
+                    <h4> {{program.title}} </h4>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div id="ambassador-campain-form" class="campain-ambassador-form">
+    <div class="content my-container">
+        <img src="../../../../../../assets/img/campain-ambassador/amadou-bâ.jpeg" alt="Amadou BÂ">
+        <div class="form-bloc">
+            <form [formGroup]="campainAmbassadorForm" (submit)="onCampainAmbassadorForm()">
+                <div class="input-bloc">
+                    <label>Nom</label>
+                    <input formControlName="lastname" type="text" placeholder="Entrez votre nom">
+                    <small *ngIf="formControls['lastname'].invalid && isFormSubmitted " class="error-feedback">Nom manquant</small>
+                </div>
+    
+                <div class="input-bloc">
+                    <label>Prénom</label>
+                    <input formControlName="firstname" type="text" placeholder="Entrez votre prénom">
+                    <small *ngIf="formControls['firstname'].invalid && isFormSubmitted " class="error-feedback">Prénom manquant</small>
+                </div>
+    
+                <div class="input-bloc">
+                    <label>Email</label>
+                    <input formControlName="email" type="text" placeholder="Entrez votre email">
+                    <small *ngIf="formControls['email'].invalid && isFormSubmitted" class="error-feedback">Adresse mail manquante</small>
+                </div>
+    
+                <div class="input-bloc">
+                    <label>Ville (champ optionnel)</label>
+                    <input formControlName="town" type="text" placeholder="Entrez votre ville">
+                </div>
+    
+                <button type="submit">
+                    S'impliquer
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

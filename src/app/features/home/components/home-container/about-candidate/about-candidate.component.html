@@ -1,0 +1,33 @@
+<div class="about-candidate">
+    <div class="content my-container">
+        <div class="top">
+            <h3>
+                <span>NOTRE MISSION EST </span>
+                <span>D'APPORTER LE CHANGEMENT</span>
+            </h3>
+            <div class="right">
+                <p>Restez à l'affut des dernières actualités de la campagne en nous suivant sur </p>
+                <div class="networks">
+                    <ng-container *ngFor="let network of networks">
+                        <a href={{network.link}} target="_blank">
+                            <img src={{network.sourceImg}} alt={{network.name}}>
+                        </a>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="image">
+                
+            </div>
+            <div class="about">
+                <h4>
+                    <span>À propos de</span>
+                    <span>Amadou BÂ</span>
+                </h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias aperiam alias perspiciatis ut minima aut, sequi eveniet rem quam cumque nisi nostrum totam animi voluptates iste, fugit molestiae itaque iusto? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, provident. Nisi pariatur error dolores ab iure odio voluptatibus reiciendis? Consectetur cumque error dignissimos quas quisquam voluptatum iste iure inventore eaque?</p>
+                <button routerLink="/le-candidat">En Apprendre Plus Sur Le Candidat</button>
+            </div>
+        </div>
+    </div>
+</div>
