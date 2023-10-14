@@ -54,11 +54,14 @@
     }
 
     fa-icon{
-        color: red;
+        color: var(--project-primary-color);
         position: absolute;
-        top: 5px;
+        top: 10px;
         left: 10px;
-        font-size: 1.4rem;
+        font-size: 1.1rem;
         z-index: 1;
+        padding: 5px 7px;
+        background-color: white;
+        border-radius: 50%;
     }
 }

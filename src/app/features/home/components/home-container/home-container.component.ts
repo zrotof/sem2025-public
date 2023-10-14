@@ -19,6 +19,6 @@ export class HomeContainerComponent implements OnInit {
   }
 
   getLastNews() : void{
-    this.lastNews$ = this.blogService.getNewBlogArticles();
+    this.lastNews$ = this.blogService.getBlogArticlesByRubricId();
   }
 }

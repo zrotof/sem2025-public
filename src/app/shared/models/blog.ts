@@ -1,10 +1,9 @@
 
 export interface ArticleCategory {
-    rubrique_id: string,
-    rubrique_title: string,
-    rubrique_image?: string,
-    slug: string,
-    state: boolean
+    id: string,
+    name: string,
+    desctiption: string,
+    isActive: boolean
 }
 
 export interface CategoryClickEvent{
@@ -13,12 +12,15 @@ export interface CategoryClickEvent{
 }
 
 export interface Article{
-    id: string,
-    title: string,
-    media : string,
-    date: string,
+    id : number,
+    title : string,
+    coverImage : string,
+    date : string,
+    hour: string,
     description : string,
-    mediaType : string
+    content: string,
+    hasVideo: boolean,
+    videoLink ?: string
 }
 
 export enum MediaType{

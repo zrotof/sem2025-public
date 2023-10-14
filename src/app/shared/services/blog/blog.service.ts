@@ -11,61 +11,66 @@ import { BlogType } from '../../enums/blog-type';
 
 export class BlogService {
 
-  categoryBaseUrl = environment.apiUrl+"rubriques/";
-  articleBaseUrl = environment.apiUrl+"articles/";
+  categoryBaseUrl = environment.apiBaseUrl+"rubrics/";
+  articleBaseUrl = environment.apiBaseUrl+"articles/";
 
   constructor( private http : HttpClient) { }
 
   getBlogCategoryList() : Observable<ArticleCategory[]>{
-    return this.http.get<any>(`${this.categoryBaseUrl}list`).pipe(
+    return this.http.get<any>(`${this.categoryBaseUrl}?isActive=true`).pipe(
       map(result => result.data),
-      map(result => result.map((result : ArticleCategory) => { return {...result,state: false}})),
+      map(result => result.map(
+        (result : ArticleCategory) => { 
+          return {
+            id: result.id,
+            name: result.name,
+            isActive: false
+          }
+        }
+      ))
     );
   }
 
-  getNewBlogArticles(): Observable<Article[]> {
-    return this.http.get<any>(`${this.articleBaseUrl}list?page=1&limit=9`).pipe(
-      map(res=> res.items),
-      map(res => res.map( (item : any) => {
-        return{
-          id : item.id,
-          title : item.title,
-          media : item.cover_image,
-          date : item.created_at,
-          description : item.description,
-          mediaType : item.media.media_type === 'image' ? BlogType.Image : BlogType.Video
-        }
-      }))
-    )
-  }
+  getBlogArticlesByRubricId( id ?: string) : Observable<Article[]> {
+    
+    let url =this.articleBaseUrl;
 
-  getBlogArticlesByCategoryId( id : string) : Observable<Article[]> {
-    return this.http.get<any>(`${this.articleBaseUrl}list?page=1&limit=10&rubrique_id=${id}`).pipe(
-      map(res=> res.items),
+    if(id){
+      url = `${url}?rubricId=${id}`
+    }
+
+    return this.http.get<any>(url).pipe(
+      map(res=> res.data),
       map(res => res.map( (item : any) => {
         return{
           id : item.id,
           title : item.title,
-          media : item.media.media_url,
-          date : item.created_at,
+          coverImage : item.coverImage,
+          date : item.date,
+          hour: item.hour,
           description : item.description,
-          mediaType : item.media.media_type === 'image' ? BlogType.Image : BlogType.Video
+          content: item.content,
+          hasVideo: item.hasVideo,
+          videoLink: item.videoLink
         }
       }))
     )
   }
 
   getArticleById( id : string) : Observable<Article> {
-    return this.http.get<any>(`${this.articleBaseUrl}display/${id}`).pipe(
-      map(res => res.article),
-      map(res => {
+    return this.http.get<any>(`${this.articleBaseUrl}${id}`).pipe(
+      map(res => res.data),
+      map(data => {
         return{
-          id : res.id,
-          title : res.title,
-          media : res.media.media_url,
-          date : res.created_at,
-          description : res.description,
-          mediaType : res.media.media_type === 'image' ? BlogType.Image : BlogType.Video
+          id : data.id,
+          title : data.title,
+          coverImage : data.coverImage,
+          date : data.date,
+          hour: data.hour,
+          description : data.description,
+          content: data.content,
+          hasVideo: data.hasVideo,
+          videoLink: data.videoLink
         }
       })
     )

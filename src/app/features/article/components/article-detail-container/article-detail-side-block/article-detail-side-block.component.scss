@@ -19,13 +19,12 @@
         .articles{
             display: flex;
             flex-direction: column;
-            height: 420px;
+            max-height: 420px;
             overflow-y: auto;
             width: 100%;
 
             .side-article{
                 display: flex;
-                justify-content: center;
                 align-items: center;
                 margin-bottom: 25px;
                 cursor: pointer;
@@ -57,6 +56,7 @@
 
                 .texts{
                     padding-right: 7px;
+                    width: calc(100% - 115px);
 
                     p{
                         &:first-child{

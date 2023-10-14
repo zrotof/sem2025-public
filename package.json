@@ -31,6 +31,7 @@
     "@nguniversal/express-engine": "^15.2.1",
     "@types/swiper": "^6.0.0",
     "@videogular/ngx-videogular": "^7.0.0",
+    "dayjs": "^1.11.10",
     "express": "^4.15.2",
     "hls.js": "^1.4.12",
     "primeicons": "^6.0.1",

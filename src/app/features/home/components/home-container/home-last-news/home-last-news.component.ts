@@ -1,7 +1,7 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, Input, ViewChild, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Article } from 'src/app/shared/models/blog';
-import { CarouselModule } from 'primeng/carousel';
+import { Carousel, CarouselModule } from 'primeng/carousel';
 import { ArticleItemComponent } from 'src/app/features/article/components/article-container/article-item/article-item.component';
 import { NewItemNoDescritpionComponent } from 'src/app/shared/components/new-item-no-descritpion/new-item-no-descritpion.component';
 
@@ -19,6 +19,7 @@ import { NewItemNoDescritpionComponent } from 'src/app/shared/components/new-ite
 export class HomeLastNewsComponent {
 
   @Input() lastNews !:  Article[];
+  @ViewChild('carousel') carousel !: Carousel;
 
   responsiveOptions  = [
     {
@@ -37,4 +38,8 @@ export class HomeLastNewsComponent {
         numScroll: 1
     }
   ];
+
+  navigateTo(param : number){
+    param > 0 ? this.carousel.navForward(1) : this.carousel.navBackward(1) ;
+  }
 }

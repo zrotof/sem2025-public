@@ -4,7 +4,7 @@ import { Article, ArticleCategory } from '../../models/blog';
 import { Observable, map, of, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { BlogType } from '../../enums/blog-type';
-import { ReplayMenu } from '../../models/replay';
+import { ReplayMenu, YoutuveVideoItem } from '../../models/replay';
 
 @Injectable({
   providedIn: 'root'
@@ -12,42 +12,27 @@ import { ReplayMenu } from '../../models/replay';
 
 export class ReplayService {
 
-  categoryBaseUrl = environment.apiUrl+"rubriques/";
-  articleBaseUrl = environment.apiUrl+"articles/";
+  replayBaseUrl = environment.apiBaseUrl+"replays/";
+  youtubeBaseUrl = environment.apiBaseUrl+"youtube/"
+
+  categoryBaseUrl = environment.apiBaseUrl+"rubrics/";
+  articleBaseUrl = environment.apiBaseUrl+"articles/";
 
   constructor( private http : HttpClient) { }
 
-  getMenuList() : Observable<ReplayMenu[]>{
 
-    const replayMenu = [
-      {
-        id: "1",
-        label: "Précédents Lives",
-        state: false
-      },
-      {
-        id: "2",
-        label: "Meetings",
-        state: false
-      },
-      {
-        id: "3",
-        label: "Débats Télévisés",
-        state: false
-      },
-      {
-        id: "4",
-        label: "Interview",
-        state: false
-      },
-      {
-        id: "5",
-        label: "Autres",
-        state: false
-      }
-    ]
+  getReplayMenuList() : Observable<ReplayMenu[]>{
+    return this.http.get<any>(this.replayBaseUrl+"?isActive=true").pipe(
+      map(({status, data, message})=> data as ReplayMenu[]),
+      map( result => result.map( res => {return {...res, isActive : false}}))
+    )
+  }
 
-    return of(replayMenu)
+  getYoutubeVideoListByPlaylistId(playlistId: string) : Observable<YoutuveVideoItem[]> {
+    return this.http.get<any>(`${this.youtubeBaseUrl}playlists/${playlistId}/videos`).pipe(
+      map(({status, data, message})=> data),
+      map(result => result.map( (res: YoutuveVideoItem) => { return {...res, isActive : false}}))
+    )
   }
 
 }

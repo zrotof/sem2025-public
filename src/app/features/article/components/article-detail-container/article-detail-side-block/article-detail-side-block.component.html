@@ -5,7 +5,7 @@
         <div class="articles">
             <ng-container *ngFor="let article of lastArticles">
                 <div class="side-article" [routerLink]="['/articles/', article.id]">
-                    <img src={{article.media}}>
+                    <img src={{article.coverImage}} alt="article.title">
                     <div class="texts">
                         <p> {{article.title}} </p>
                         <p> 
@@ -23,8 +23,8 @@
 
         <div class="rubriques">
             <ng-container *ngFor="let rubrique of blogCategories">
-                <button (click)="goToArticlesMenuList(rubrique.rubrique_id)">
-                    {{rubrique.rubrique_title}}
+                <button (click)="goToArticlesMenuList(rubrique.id)">
+                    {{rubrique.name}}
                 </button>
             </ng-container>
         </div>

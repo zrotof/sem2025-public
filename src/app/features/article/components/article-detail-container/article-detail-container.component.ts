@@ -82,7 +82,7 @@ export class ArticleDetailContainerComponent implements OnInit {
   }
 
   getLastCreatedArticles() : void {
-    this.lastArticles$ = this.blogService.getNewBlogArticles();
+    this.lastArticles$ = this.blogService.getBlogArticlesByRubricId();
   }
 
   getBlogCategoryList() : void {

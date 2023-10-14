@@ -22,14 +22,19 @@
                 </div>
     
                 <div class="input-bloc">
-                    <label>Ville (champ optionnel)</label>
+                    <label>Ville</label>
                     <input formControlName="town" type="text" placeholder="Entrez votre ville">
+                    <small *ngIf="formControls['town'].invalid && isFormSubmitted" class="error-feedback">Renseignez votre ville</small>
                 </div>
     
-                <button type="submit">
-                    S'impliquer
+                <button type="submit" >
+                    <ng-container *ngIf="iscampainAmbassadorFormSubmittedAndNotErrorOnClientSide; else defaultText">
+                        <p-progressSpinner [style]="{width: '20px', height: '20px'}" strokeWidth="8"></p-progressSpinner>
+                    </ng-container>
                 </button>
             </form>
+            <ng-template #defaultText>Je m'implique</ng-template>
+            <p-toast  [styleClass]="'custom-toast'" position="top-right"></p-toast>     
         </div>
     </div>
 </div>

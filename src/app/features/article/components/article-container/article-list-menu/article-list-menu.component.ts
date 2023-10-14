@@ -23,12 +23,12 @@ export class ArticleListMenuComponent implements OnChanges {
   private isFirstChange = true;
 
   setActiveMenu( index : number){
-    this.menuList.forEach(menu => menu.state = false );
-    this.menuList[index].state = true;
+    this.menuList.forEach(menu => menu.isActive = false );
+    this.menuList[index].isActive = true;
   }
 
   getBlogsByCategoryId(id: string, index: number){
-    if(this.menuList[index].state === false){
+    if(this.menuList[index].isActive === false){
       this.setActiveMenu(index);
       this.menuItemClikedEvent.emit(id);
     }
@@ -39,16 +39,21 @@ export class ArticleListMenuComponent implements OnChanges {
 
       if(this.targetMenuId){
 
-        const targetMenu = this.menuList.find((menu) => menu.rubrique_id === this.targetMenuId)
+        const targetMenu = this.menuList.find((menu) => menu.id === this.targetMenuId)
+
         if(targetMenu){
+
+
           const index = this.menuList.indexOf(targetMenu);
+
           this.getBlogsByCategoryId(this.targetMenuId, index)
         }
         else{
-          this.getBlogsByCategoryId(this.menuList[0].rubrique_id, 0);
+          this.getBlogsByCategoryId(this.menuList[0].id, 0);
         }
       }else{
-        this.getBlogsByCategoryId(this.menuList[0].rubrique_id, 0);
+
+        this.getBlogsByCategoryId(this.menuList[0].id, 0);
       }
 
       this.isFirstChange = false;

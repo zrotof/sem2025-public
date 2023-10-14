@@ -5,6 +5,7 @@ import { BlogType } from 'src/app/shared/enums/blog-type';
 import { ConvertTimeZoneToDatePipe } from 'src/app/shared/pipes/convertTimeZoneToDate/convert-timezone-to-date.pipe';
 import { ConvertStringLabelToFontawesomeIconPipe } from 'src/app/shared/pipes/convertStringLabelToFontawesomeIcon/convert-string-label-to-fontawesome-icon.pipe';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ArticleVideoPlayerComponent } from './article-video-player/article-video-player.component';
 
 @Component({
   selector: 'app-article-data',
@@ -13,7 +14,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     NgIf,
     ConvertTimeZoneToDatePipe,
     ConvertStringLabelToFontawesomeIconPipe,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ArticleVideoPlayerComponent
   ],
   templateUrl: './article-data.component.html',
   styleUrls: ['./article-data.component.scss'],

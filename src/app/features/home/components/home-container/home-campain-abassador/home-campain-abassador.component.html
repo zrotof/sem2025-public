@@ -6,39 +6,45 @@
                 <span>Ambassadeur De Campagne</span>
             </h3>
             <p>Passez à l'action et devenez un Ambassadeur de Campagne. Rejoignez notre communauté passionnée, partagez notre vision, soyez le moteur du changement. Rejoignez-nous maintenant !</p>
-            <button routerLink="">
+            <button routerLink="/devenir-ambassadeur-de-campagne">
                 <span>En Savoir Plus</span>
                 <i class="pi pi-arrow-up-right"></i>
             </button>
         </div>
 
-        <form [formGroup]="camPainAmbassadorForm" (submit)="onCampainAmbassadorForm()">
+        <form [formGroup]="campainAmbassadorForm" (submit)="onCampainAmbassadorForm()">
             <div class="input-bloc">
                 <label>Nom</label>
-                <input type="text" placeholder="Entrez votre nom">
+                <input formControlName="lastname" type="text" placeholder="Entrez votre nom">
                 <small *ngIf="formControls['lastname'].invalid && isFormSubmitted " class="error-feedback">Nom manquant</small>
             </div>
 
             <div class="input-bloc">
                 <label>Prénom</label>
-                <input type="text" placeholder="Entrez votre prénom">
+                <input formControlName="firstname" type="text" placeholder="Entrez votre prénom">
                 <small *ngIf="formControls['firstname'].invalid && isFormSubmitted " class="error-feedback">Prénom manquant</small>
             </div>
 
             <div class="input-bloc">
                 <label>Email</label>
-                <input type="text" placeholder="Entrez votre email">
+                <input formControlName="email" type="text" placeholder="Entrez votre email">
                 <small *ngIf="formControls['email'].invalid && isFormSubmitted" class="error-feedback">Adresse mail manquante</small>
             </div>
 
             <div class="input-bloc">
-                <label>Ville (champ optionnel)</label>
-                <input type="text" placeholder="Entrez votre ville">
+                <label>Ville</label>
+                <input type="text" formControlName="town" placeholder="Entrez votre ville">
+                <small *ngIf="formControls['town'].invalid && isFormSubmitted" class="error-feedback">Renseignez votre ville</small>
             </div>
 
-            <button type="submit">
-                S'impliquer
+            <button type="submit" >
+                <ng-container *ngIf="iscampainAmbassadorFormSubmittedAndNotErrorOnClientSide; else defaultText">
+                    <p-progressSpinner [style]="{width: '20px', height: '20px'}" strokeWidth="8"></p-progressSpinner>
+                </ng-container>
             </button>
         </form>
+
+        <ng-template #defaultText>Je m'implique</ng-template>
+        <p-toast  [styleClass]="'custom-toast'" position="top-right"></p-toast>     
     </div>
 </div>

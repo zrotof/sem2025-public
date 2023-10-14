@@ -2,10 +2,10 @@
     <div class="content my-container">
         <ng-container *ngFor="let menu of menuList; let i = index">
             <button 
-                [ngClass]="menu.state ? 'active':''"
-                (click)="getBlogsByCategoryId(menu.rubrique_id, i)"
+                [ngClass]="menu.isActive ? 'active':''"
+                (click)="getBlogsByCategoryId(menu.id, i)"
             >
-                {{menu.rubrique_title}}
+                {{menu.name}}
             </button>
         </ng-container>
     </div>
