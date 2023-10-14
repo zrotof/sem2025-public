@@ -17,19 +17,20 @@ export class ReplayMenuListComponent implements OnChanges {
   private isFirstChange = true;
 
   setActiveMenu( index : number){
-    this.replayMenuList.forEach(menu => menu.state = false );
-    this.replayMenuList[index].state = true;
+    this.replayMenuList.forEach(menu => menu.isActive = false );
+    this.replayMenuList[index].isActive = true;
   }
-  getReplayListByReplayCategoryId(id : string, index: number){
-    if(this.replayMenuList[index].state === false){
+
+  getReplayListByReplayCategoryId(playlistId : string, index: number){
+    if(this.replayMenuList[index].isActive === false){
       this.setActiveMenu(index);
-      this.replayMenuItemClikedEvent.emit(id);
+      this.replayMenuItemClikedEvent.emit(playlistId);
     }
   }
 
   ngOnChanges(changes: SimpleChanges): void {
     if(changes['replayMenuList'].currentValue && this.isFirstChange){
-        this.getReplayListByReplayCategoryId(this.replayMenuList[0].id, 0);
+        this.getReplayListByReplayCategoryId(this.replayMenuList[0].playlistId, 0);
         this.isFirstChange = false;
     }
   }

@@ -8,10 +8,10 @@
         <div class="replay-menu-list">
             <ng-container *ngFor="let replayMenu of replayMenuList; let i = index">
                 <button 
-                    [ngClass]="replayMenu.state ? 'active':''"
-                    (click)="getReplayListByReplayCategoryId(replayMenu.id, i)"
+                    [ngClass]="replayMenu.isActive ? 'active':''"
+                    (click)="getReplayListByReplayCategoryId(replayMenu.playlistId, i)"
                 >
-                    {{replayMenu.label}}
+                    {{replayMenu.title}}
                 </button>
             </ng-container>
         </div>
