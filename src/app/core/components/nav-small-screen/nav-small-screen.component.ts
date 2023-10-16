@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { RouterLinkActive } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-nav-small-screen',
@@ -7,7 +7,8 @@ import { RouterLinkActive } from '@angular/router';
   styleUrls: ['./nav-small-screen.component.scss'],
   standalone : true,
   imports : [
-    RouterLinkActive
+    RouterLinkActive,
+    RouterLink
   ]
 })
 export class NavSmallScreenComponent implements OnInit {

@@ -9,7 +9,6 @@
     ul{
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
         list-style: none;
 
         li{
@@ -21,34 +20,25 @@
             a{
                 text-decoration: none;
                 width: fit-content;
-                padding: 5px 5px 5px 25px;
+                padding: 7px 25px;
                 color: white;
                 display: flex;
                 align-items: center;
                 transition: all 0.3s ease-in-out;
-                border-radius: 25px;
                 cursor: pointer;
 
                 &:hover{
-                    background-color: #9a261f;
+                    border-bottom: 1px solid var(--project-primary-color);
                 }
 
                 span{
                     font-size: 1em;
                 }
 
-                i{
-                    margin-left: 15px;
-                    font-size: 1.15em;
-                    padding: 7px 7px 6px 7px;
-                    border-radius: 50%;
-                    background-color: white;
-                    color: #9a261f;
-                }
             }
 
             .active-link{
-                background-color: #9a261f;
+                background-color: var(--project-primary-color);
             }
         }
     }
@@ -57,7 +47,7 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        align-items: flex-end;
+        align-items: center;
         margin-top: 35px;
 
         p{
@@ -66,9 +56,9 @@
 
         .networks{
             display: flex;
-            justify-content: flex-end;
+            justify-content: center;
             width: 100%;
-            border-top: 1px solid white;
+            border-top: 1px solid rgb(126, 126, 126);
             padding-top: 20px;
             margin-top: 10px;
 

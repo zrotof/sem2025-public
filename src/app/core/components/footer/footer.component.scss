@@ -132,3 +132,121 @@ footer{
     }
 
 }
+
+@media all and (max-width: 1125px){
+    footer{
+        .content{
+            .top{
+                gap: 2rem;
+                flex-wrap: wrap;
+
+                .logo-networks-apps-blocs{
+                    width: 350px;
+                    > img {
+                        height: 70px;
+                    }
+    
+                    p{
+                        line-height: 20px;
+                        font-size: 14px;
+                        margin-bottom: 15px;
+                    }
+    
+                    .networks{
+                        margin-top: 15px;                        
+        
+                         a{
+                            width: 30px;
+                            height : 30px;
+        
+                            img{
+                                height: 16px;
+                            }
+                         }                    
+                    }
+                }
+    
+                .act,
+                .inform,
+                .apps{
+                    h3{
+                        font-size: 1.1rem;
+                    }
+    
+                    ul{
+                        li{
+                            font-size: 0.87rem;                                    
+
+                            &:hover{
+
+                                a{
+                                    img{
+                                        transform: scale(1.1);
+                                    }
+                                }
+                            }
+    
+                            a{
+                                img{
+                                    height: 45px !important;
+                                    width: 150px !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .bottom{
+                p{
+                    font-size: 0.87rem;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 425px){
+    footer{
+        .content{
+            .top{
+                justify-content: center;
+
+                .logo-networks-apps-blocs{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    p{
+                        text-align: center;
+                    }
+    
+                    .networks{
+                        justify-content: center;                   
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 404px){
+    footer{
+        .content{
+            .top{
+                .act,
+                .inform,
+                .apps{
+                    width: 100%;
+                    align-items: center;
+                    ul{
+                        li{
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -76,7 +76,7 @@ export class FooterComponent {
       link : "/le-programme"
     },
     {
-      label : "Streaming",
+      label : "Live / Replays",
       link : "/lives"
     }
   ]

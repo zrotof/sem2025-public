@@ -18,11 +18,13 @@
                 color: var(--project-primary-color);
                 margin-bottom: 30px;
                 font-size: 2.5rem;
+                text-align: center;
             }
 
             p{
                 line-height: 23px;
                 text-align: center;
+                color: var(--project-font-black);
             }
         }
 
@@ -34,13 +36,14 @@
                 display: flex;
                 justify-content: space-between;
                 width: 100%;
-                margin-bottom: 80px;
+                margin-bottom: 25px;
 
                 &:last-child{
                     margin-bottom: 0;
                 }
 
                 img{
+                    display: none;
                     object-fit: cover;
                     object-position: top center;
                     width: 20rem;
@@ -81,6 +84,76 @@
             }
 
 
+        }
+    }
+}
+
+@media all and (max-width: 1024px){
+    .biography-bloc{
+        .content{
+            .title{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 100px;
+    
+                h2{
+                    font-size: 2.3rem;
+                }
+    
+                p{
+                    line-height: 23px;
+                    font-size: 15px;
+                }
+            }
+
+            .biography-elements{
+                .biography-element{
+                    .texts{
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+    
+                        h3{
+                            font-size: 1.4rem;
+                        }
+    
+                        p{
+                            font-size: 15px !important;
+                        }
+                    }
+                }
+    
+    
+    
+            }
+        }
+    }
+}
+
+@media all and (max-width: 768px){
+    .biography-bloc{
+        .content{
+            .biography-elements{
+                .biography-element{
+                    .texts{
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        align-items: center;
+    
+                        h3{
+                            font-size: 1.2rem;
+                            text-align: center;
+                        }
+    
+                        p{
+                            font-size: 14px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
         }
     }
 }

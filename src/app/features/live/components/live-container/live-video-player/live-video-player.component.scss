@@ -58,3 +58,42 @@
         }
     }
 }
+
+@media all and (max-width: 768px){
+    .live-video-player{
+        .content{
+            .live-bloc{
+                margin-top: 170px;
+
+                h1{
+                    font-size: 1.8rem;
+                    margin-bottom: 40px;
+                }
+                .live{
+                    height: 375px;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 425px){
+    .live-video-player{
+        &::before{
+            height: 350px;
+        }
+        .content{
+            .live-bloc{
+                margin-top: 140px;
+
+                h1{
+                    font-size: 1.5rem;
+                    margin-bottom: 40px;
+                }
+                .live{
+                    height: 228px;
+                }
+            }
+        }
+    }
+}

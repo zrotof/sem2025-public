@@ -21,7 +21,6 @@
                 &:first-child{
                     -webkit-text-stroke: 2px var(--project-primary-color);
                     color: transparent;
-                    font-size: 2rem;
                     color: white;
                 }
 
@@ -176,4 +175,60 @@
             }
         }
     }
+}
+
+@media all and (max-width: 1180px){
+    .featured-programs{
+        .content{
+    
+            .programs{
+                overflow-x: scroll;
+                display: -webkit-box;
+                padding-bottom: 20px;
+
+
+                .program{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px 15px 20px 15px;
+                    width: 270px;
+                    margin-right: 15px;
+    
+                    &:last-child{
+                        margin-right: 0;
+                    }
+
+                    .number{
+                        font-size: 2.8rem;
+                    }
+    
+                    h3{
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+@media all and (max-width: 930px){
+    .featured-programs{
+        .content{
+            h2{
+                font-size: 2.3rem;
+            }
+    
+            .description-action{
+                margin-bottom : 50px;
+                flex-direction: column;
+                align-items: flex-start;
+
+                p{
+                    font-size: 15px;
+                    width: 100%;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }    
 }

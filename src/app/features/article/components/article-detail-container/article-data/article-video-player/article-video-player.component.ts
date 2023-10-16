@@ -32,7 +32,6 @@ export class ArticleVideoPlayerComponent implements OnInit, OnChanges {
 
     if(iframe){
       const url = iframe.getAttribute('src') as string;
-      console.log(url)
       this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(url);
     }
     else{

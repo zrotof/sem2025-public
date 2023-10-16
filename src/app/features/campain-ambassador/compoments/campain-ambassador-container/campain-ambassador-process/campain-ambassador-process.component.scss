@@ -56,3 +56,47 @@
         }
     }
 }
+
+@media all and (max-width: 870px){
+    .campain-ambassador-process{
+        .content{
+            .process-bloc{
+                flex-direction: column;
+
+                .process{
+                    > span{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 425px){
+    .campain-ambassador-process{
+        .content{
+            h1{
+                text-align: center;
+            }
+            .process-bloc{
+                margin-top: 35px;
+                .process{
+                    .top{
+                        justify-content: center;
+                        flex-direction: column;
+                        span{
+                            margin-left: 0;
+                            margin-bottom: 5px;
+                        }
+                    }
+                    > span{
+                        font-size: 14px;
+                        text-align: center;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

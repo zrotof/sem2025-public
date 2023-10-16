@@ -21,6 +21,7 @@
 
                 &:last-child{
                     font-size: 2rem;
+                    text-align: center;
                 }
             }
         }
@@ -28,6 +29,7 @@
         .replay-menu-list{
             display: flex;
             width: 100%;
+            flex-wrap: wrap;
             
             button{
                 margin-right: 10px;
@@ -46,6 +48,18 @@
                 color: var(--project-primary-color);
                 border: 2px solid var(--project-primary-color);
                 background-color: var(--project-secondary-color);
+            }
+        }
+    }
+}
+
+@media all and (max-width: 768px){
+    .replay-menu-list{
+        .content{
+            .replay-menu-list{
+                button{
+                    font-size: 15px;
+                }
             }
         }
     }
