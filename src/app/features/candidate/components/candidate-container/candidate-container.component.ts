@@ -38,8 +38,8 @@ export class CandidateContainerComponent implements OnInit {
 
   initAmbassadorBanner() : void {
     this.ambassadorBanner = {
-      text : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur reprehenderit ipsum ex at doloremque saepe soluta repellat rerum nisi incidunt quo.",
-      image : "../../../../assets/img/campain-ambassador/crowd.jpeg",
+      text : "Passez à l'action et devenez un Ambassadeur de Campagne. Rejoignez notre communauté passionnée, partagez notre vision, soyez le moteur du changement.",
+      image : "../../../../../assets/img/campain-ambassador/crowded.jpeg",
       alt : ''
     }
   }

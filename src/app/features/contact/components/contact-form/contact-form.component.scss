@@ -2,6 +2,10 @@
     display: flex;
     justify-content: center;
 
+    .custom-toast{
+        z-index: 999999999 !important;
+    }
+    
     .content{
         display: flex;
         flex-direction: column;
@@ -52,6 +56,7 @@
                         display: flex;
                         align-items: center;
                         width: 100%;
+                        margin-bottom: 10px;
 
                         fa-icon{
                             font-size: 1.5rem;

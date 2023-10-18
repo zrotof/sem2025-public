@@ -92,6 +92,10 @@
                     position: relative;
                     margin-right: 20px;
 
+                    &:last-child{
+                        margin-right: 0;
+                    }
+
                     &:not(:first-child){
                         padding-left : 50px;
 
@@ -126,6 +130,135 @@
                 width: 455px;
                 bottom: 0;
                 right: 0;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1024px){
+    .campain-counter-event{
+        .content{
+            .card{
+                padding: 30px 20px;
+    
+                h2{
+                    margin-bottom: 17px;
+                    font-size: 1.8rem;
+                }
+
+                button{
+                    margin-bottom: 20px;
+                }
+    
+                .countdown {
+                    .countdown-item {
+                        margin-right: 10px;
+    
+                        &:not(:first-child){
+                            padding-left : 30px;
+    
+                            &::after{
+                                font-size: 3rem;
+                            }
+                        }
+    
+                        span{
+                            &:first-child{
+                                font-size: 2.5rem;
+                            }
+        
+                            &:last-child{
+                                font-size: 15px;
+                            }
+                        }
+                        
+                      }
+                }
+    
+                img{
+                    width: 350px;
+                    right: -40px;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 840px){
+    .campain-counter-event{
+        .content{
+            .card{
+                img{
+                    width: 295px;
+                    right: -30px;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 705px){
+    .campain-counter-event{
+        .content{
+            .card{
+                width: 100%;
+                align-items: center;
+
+                h2{
+                    font-size: 1.5rem;
+                    text-align: center;
+                }
+
+                button{
+                    margin-top: 5px;
+                }
+    
+                img{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 490px){
+    .campain-counter-event{
+        .content{
+            .card{
+                padding: 20px 10px;
+    
+                h2{
+                    margin-bottom: 17px;
+                    font-size: 1.3rem;
+                }
+
+                button{
+                    font-size: 15px;
+                }
+    
+                .countdown {
+                    .countdown-item {
+                        margin-right: 10px;
+    
+                        &:not(:first-child){
+                            padding-left : 15px;
+    
+                            &::after{
+                                font-size: 1rem;
+                            }
+                        }
+    
+                        span{
+                            &:first-child{
+                                font-size: 1.3rem;
+                            }
+        
+                            &:last-child{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

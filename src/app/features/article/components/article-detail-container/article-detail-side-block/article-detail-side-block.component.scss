@@ -22,6 +22,7 @@
             max-height: 420px;
             overflow-y: auto;
             width: 100%;
+            padding-right: 15px;
 
             .side-article{
                 display: flex;
@@ -120,6 +121,161 @@
                     background-color: var(--project-primary-color);
                     color: var(--project-secondary-color);
                 }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1190px){
+    .article-side-block{
+        padding: 2rem 1rem;
+        width: 355px;
+    
+        .last{
+            h4{
+                margin-bottom: 30px;
+                font-size: 1.4rem;
+            }
+    
+            .articles{
+                .side-article{
+                    .texts{
+                        p{
+                            &:first-child{
+                                font-size: 15px;
+                            }
+    
+                            &:last-child{
+                                fa-icon{
+                                    font-size: 1rem;    
+                                }
+    
+                                span{
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        .rubriques-bloc{
+            h4{
+                margin-bottom: 30px;
+                font-size: 1.4rem;
+            }
+    
+            .rubriques{
+                button{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 970px){
+    .article-side-block{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 50px;
+        background-color: transparent;
+        border-radius: 7px;
+        padding: 0;
+        width: 100%;
+    
+        .last{
+            padding-top: 45px;
+            padding-bottom: 0;
+            margin-bottom: 35px;
+            border-top: 1px solid #a19f9e;
+            border-bottom: none;
+            height: fit-content;
+            margin-top: 50px;
+            
+            h4{
+                margin-bottom: 30px;
+                font-size: 1.4rem;
+            }
+    
+            .articles{
+                display: -webkit-box;
+                max-height: unset;
+                overflow-y: unset;
+                overflow-x: scroll;
+                width: 100%;
+                padding-right: 0;
+                gap: 2rem;
+                padding-bottom: 30px;
+    
+                .side-article{
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 0;
+                    border-radius: 0;
+                    width: 200px;
+    
+                    &:hover{
+                        box-shadow: none;
+                        background-color: var(--project-primary-color);
+                        
+                        .texts{
+                            p{
+                                color: white !important;
+
+                            }
+                        }
+                    }
+    
+                    img{
+                        width: 100%;
+                        height: 150px;
+                        margin-right: 0;
+                        border-radius: 0;
+                    }
+    
+                    .texts{
+                        width: 100%;
+                        padding: 7px 5px;
+                    }
+                }
+            }
+        }
+    
+        .rubriques-bloc{
+            h4{
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 500px){
+    .article-side-block{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 50px;
+        background-color: transparent;
+        border-radius: 7px;
+        padding: 0;
+        width: 100%;
+    
+        .last{
+            padding-top: 25px;
+            margin-top: 30px;
+            
+            h4{
+                margin-bottom: 30px;
+                font-size: 1.3rem;
+            }
+    
+        }
+    
+        .rubriques-bloc{
+            h4{
+                margin-bottom: 20px;
+                font-size: 1.3rem;
             }
         }
     }

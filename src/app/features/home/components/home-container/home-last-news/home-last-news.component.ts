@@ -33,7 +33,7 @@ export class HomeLastNewsComponent {
         numScroll: 1
     },
     {
-        breakpoint: '675px',
+        breakpoint: '415px',
         numVisible: 1,
         numScroll: 1
     }

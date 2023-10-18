@@ -4,7 +4,7 @@
         <div class="texts-form">
             <div class="texts">
                 <h3>N'hésitez Pas À Nous Contacter</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, dolorem, vel dignissimos voluptatem dicta necessitatibus officia laboriosam ut adipisci nobis aliquid quas repellat tempora quibusdam laudantium quisquam. Consequatur, pariatur accusamus.</p>
+                <p>Vous pouvez nous joindre à tout moment pour tout savoir sur notre campagne électorale ! Utiliser l'un des moyens parmis ceux proposés.</p>
                 <div class="contact-ways">
                     <ng-container *ngFor="let contactWay of contactWays">
                         <div class="contact-way">
@@ -19,9 +19,9 @@
                 <div class="networks-bloc">
                     <span>Nos Réseaux Sociaux</span>
                     <div class="networks">
-                        <ng-container *ngFor="let socialMedia of socialMediaList">
+                        <ng-container *ngFor="let socialMedia of networks">
                             <div class="network">
-                                <img src={{socialMedia.source}} alt={{socialMedia.alt}}>
+                                <img src={{socialMedia.sourceImg}} alt={{socialMedia.name}}>
                             </div>
                         </ng-container>
                     </div>
@@ -60,7 +60,7 @@
                 <div class="row-one">
                     <div class="input-bloc">
                         <label>Objet</label>
-                        <input formControlName="lastname" type="text" placeholder="Entrez l'objet du message">
+                        <input formControlName="object" type="text" placeholder="Entrez l'objet du message">
                         <small *ngIf="formControls['object'].invalid && isFormSubmitted " class="error-feedback">Objet du message manquant</small>
                     </div>
                 </div>
@@ -76,11 +76,16 @@
                     </div>
                 </div>
 
-                <button type="submit">
-                    Envoyer
+                <button type="submit" >
+                    <ng-container *ngIf="isContactFormSubmittedAndNotErrorOnClientSide; else defaultText">
+                        <p-progressSpinner [style]="{width: '20px', height: '20px'}" strokeWidth="8"></p-progressSpinner>
+                    </ng-container>
                 </button>
 
             </form>
+
+            <ng-template #defaultText>Envoyer</ng-template>
+            <p-toast  [styleClass]="'custom-toast'" position="top-right"></p-toast>     
         </div>
     </div>
 </div>

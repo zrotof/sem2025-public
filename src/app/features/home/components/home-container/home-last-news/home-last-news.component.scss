@@ -3,7 +3,6 @@
     justify-content: center;
     width: 100%;
     margin-top: 6rem;
-    margin-bottom: 6rem;
     color: var(--project-background-black-color);
 
     .content{
@@ -96,8 +95,8 @@
                 .p-carousel-indicators{
                     .p-carousel-indicator{
                         button{
-                            width: 55px;
-                            height: 10px;
+                            width: 17px;
+                            height: 17px;
                             margin-right: 5px;
                             border-radius : 100px;
                             background-color : transparent;
@@ -116,6 +115,77 @@
                     }
                 }
             }
+        }
+    }
+}
+
+@media all and (max-width: 1024px){
+    .home-last-news{
+        .content{
+            h2{
+                margin-bottom: 40px;
+    
+                span{
+                    &:first-child{
+                        font-size: 2.2rem;
+                    }
+    
+                    &:last-child{
+                        font-size: 2.2rem;
+                    }
+                }
+            }
+    
+            p{
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 768px){
+    .home-last-news{
+        .content{
+            h2{
+                margin-bottom: 40px;
+    
+                span{
+                    &:first-child{
+                        font-size: 2rem;
+                    }
+    
+                    &:last-child{
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            .navigation{
+                display: none;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 425px){
+    .home-last-news{
+        .content{
+            h2{    
+                span{
+                    &:first-child{
+                        font-size: 1.8rem;
+                    }
+    
+                    &:last-child{
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+
+            p{
+                font-size: 14px;
+            }
+
         }
     }
 }

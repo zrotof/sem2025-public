@@ -18,6 +18,7 @@
                 color: var(--project-primary-color);
                 margin-bottom: 30px;
                 font-size: 2.5rem;
+                text-align: center;
             }
 
             p{
@@ -29,14 +30,14 @@
         .programs{
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: center;
+            gap: 2rem 1rem;
 
             .program{
                 display: flex;
                 flex-direction: column;
-                margin-bottom: 3rem;
                 justify-content: center;
-                width: 15rem;
+                width: 14rem;
                 cursor: pointer;
 
                 img{
@@ -52,6 +53,110 @@
                     font-size: 1.3rem;
                     text-align: center;
                     color: var(--project-font-black);
+                }
+            }
+        }
+    }
+}
+
+
+
+@media all and (max-width: 986px){
+    .program-list{
+        .content{
+            .programs{
+                .program{
+                    width: 16rem;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 845px){
+    .program-list{
+        .content{
+
+
+            .title{
+                margin-top: 4rem;
+                h2{
+                    font-size: 2rem;
+                }
+    
+                p{
+                    font-size: 15px;
+                }
+            }
+            .programs{
+                .program{
+                    width: 14rem;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 745px){
+    .program-list{
+        .content{
+            .programs{
+                .program{
+                    width: 14rem;
+                    img{
+                        height: 16rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 505px){
+    .program-list{
+        .content{
+            .title{
+                margin-top: 3rem;
+                h2{
+                    font-size: 1.8rem;
+                    text-align: center;
+                }
+    
+                p{
+                    font-size: 14px;
+                }
+            }
+
+            .programs{
+                gap: 1.5rem 0.5rem;
+                justify-content: space-between;
+
+                .program{
+                    width: 11rem;
+                    img{
+                        height: 12rem;
+                    }
+
+                    h4{
+                    font-size: 1.1rem;
+                }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 385px){
+    .program-list{
+        .content{
+            .programs{
+                justify-content: center;
+
+                .program{
+                    width: 250px;
+                    img{
+                        height: 16rem;
+                    }
                 }
             }
         }

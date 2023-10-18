@@ -27,7 +27,7 @@ export class HeroBannerService {
     },
     {
       id: "candidat",
-      image : "../../../../../assets/img/home/main-hero/candidat.jpeg",
+      image : "../../../../../assets/img/home/main-hero/crowd.jpg",
       title : "Biographie",
       menus : [
         {
@@ -75,7 +75,7 @@ export class HeroBannerService {
     },
     {
       id: "program",
-      image : "../../../../../assets/img/home/main-hero/candidat.jpeg",
+      image : "../../../../../assets/img/home/main-hero/crowd.jpg",
       title : "Mon Programme",
       menus : [
         {
@@ -91,7 +91,7 @@ export class HeroBannerService {
     },
     {
       id: "program-sante",
-      image : "../../../../../assets/img/home/main-hero/candidat.jpeg",
+      image : "../../../../../assets/img/home/main-hero/crowd.jpg",
       title : "Santé",
       menus : [
         {
@@ -107,7 +107,7 @@ export class HeroBannerService {
     },
     {
       id: "program-agriculture",
-      image : "../../../../../assets/img/home/main-hero/candidat.jpeg",
+      image : "../../../../../assets/img/home/main-hero/crowd.jpg",
       title : "Agriculture",
       menus : [
         {
@@ -123,7 +123,7 @@ export class HeroBannerService {
     },
     {
       id: "program-economie",
-      image : "../../../../../assets/img/home/main-hero/candidat.jpeg",
+      image : "../../../../../assets/img/home/main-hero/crowd.jpg",
       title : "Économie",
       menus : [
         {
@@ -139,7 +139,7 @@ export class HeroBannerService {
     },
     {
       id: "program-education",
-      image : "../../../../../assets/img/home/main-hero/candidat.jpeg",
+      image : "../../../../../assets/img/home/main-hero/crowd.jpg",
       title : "Éducation",
       menus : [
         {
@@ -155,7 +155,7 @@ export class HeroBannerService {
     },
     {
       id: "program-transport",
-      image : "../../../../../assets/img/home/main-hero/candidat.jpeg",
+      image : "../../../../../assets/img/home/main-hero/crowd.jpg",
       title : "Transport",
       menus : [
         {
@@ -171,7 +171,7 @@ export class HeroBannerService {
     },
     {
       id: "program-travail",
-      image : "../../../../../assets/img/home/main-hero/candidat.jpeg",
+      image : "../../../../../assets/img/home/main-hero/crowd.jpg",
       title : "Travail",
       menus : [
         {
@@ -187,7 +187,7 @@ export class HeroBannerService {
     },
     {
       id: "program-technologie",
-      image : "../../../../../assets/img/home/main-hero/candidat.jpeg",
+      image : "../../../../../assets/img/home/main-hero/crowd.jpg",
       title : "Technologie",
       menus : [
         {
@@ -203,7 +203,7 @@ export class HeroBannerService {
     },
     {
       id: "program-famille",
-      image : "../../../../../assets/img/home/main-hero/candidat.jpeg",
+      image : "../../../../../assets/img/home/main-hero/crowd.jpg",
       title : "Famille",
       menus : [
         {
@@ -219,7 +219,7 @@ export class HeroBannerService {
     },
     {
       id: "program-formation",
-      image : "../../../../../assets/img/home/main-hero/candidat.jpeg",
+      image : "../../../../../assets/img/home/main-hero/crowd.jpg",
       title : "Formation",
       menus : [
         {

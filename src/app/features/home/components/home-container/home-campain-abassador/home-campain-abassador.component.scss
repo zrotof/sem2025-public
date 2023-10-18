@@ -3,7 +3,7 @@
     justify-content: center;
     width: 100%;
     margin-top: 5rem;
-    background-image: url('../../../../../../assets/img/home/ambassador-campain/bg.jpeg');
+    background-image: url('../../../../../../assets/img/home/ambassador-campain/background.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -99,7 +99,6 @@
 
         form{
             width: 450px;
-            border-radius: 10px;
             background-color: white;
             margin-left: 50px;
             padding: 2rem;
@@ -158,6 +157,102 @@
                     font-size: 1.2rem;
                     transition: all 0.2s ease-out;
                 }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1024px){
+    .home-campain-abassador{
+        .content{
+            .texts-bloc{
+                width: calc(100% - 450px);
+                
+                h3{
+                    span{
+                        &:first-child{
+                            font-size: 2.2rem;
+                        }
+    
+                        &:last-child{
+                            font-size: 1.7rem;
+                        }
+                    }
+                }
+    
+                p{
+                    margin-bottom: 20px;
+                    line-height: 23px;
+                    font-size: 15px;
+                }
+            }
+    
+            form{
+                width: 400px;
+                padding: 2rem 1.5rem;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 900px){
+    .home-campain-abassador{
+        .content{
+            flex-direction: column;
+            align-items: center;
+            .texts-bloc{
+                width: 100%;
+                align-items: center;
+                h3{
+                    text-align: center;
+                }
+    
+                p{
+                    text-align: center;
+                }
+            }
+    
+            form{
+                margin-top: 70px;
+                width: 100%;
+                max-width: 600px;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 425px){
+    .home-campain-abassador{
+        .content{
+            padding-top: 3rem;
+            padding-bottom: 4rem;
+            .texts-bloc{
+                h3{
+                    span{
+                        &:first-child{
+                            font-size: 2rem;
+                        }
+    
+                        &:last-child{
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+    
+                p{
+                    font-size: 14px;
+                }
+
+                button{
+                    font-size: 15px;
+                }
+            }
+    
+            form{
+                margin-top: 50px;
+                width: 95%;
+                padding: 1rem 20px;
             }
         }
     }

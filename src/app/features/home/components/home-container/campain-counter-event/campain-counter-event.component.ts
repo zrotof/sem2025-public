@@ -5,7 +5,6 @@ import { interval } from 'rxjs';
 @Component({
   selector: 'app-campain-counter-event',
   standalone: true,
-  imports: [CommonModule],
   templateUrl: './campain-counter-event.component.html',
   styleUrls: ['./campain-counter-event.component.scss']
 })

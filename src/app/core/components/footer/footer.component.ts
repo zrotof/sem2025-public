@@ -1,30 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Network } from 'src/app/shared/models/network';
+import { UtilsService } from 'src/app/shared/services/utils/utils.service';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent {
+export class FooterComponent implements OnInit {
 
-  networks : Network[] = [
-    {
-      sourceImg : "../../../assets/img/social-medias/facebook.png",
-      link : "",
-      name : "facebook"
-    },
-    {
-      sourceImg : "../../../assets/img/social-medias/instagram.png",
-      link : "",
-      name : "instagram"
-    },
-    {
-      sourceImg : "../../../assets/img/social-medias/tik-tok.png",
-      link : "",
-      name : "tik tok"
-    }
-  ]
+  constructor( private utilsService: UtilsService){}
+
+  networks !: Network[] ;
 
   apps : Network[] = [
     {
@@ -80,4 +67,15 @@ export class FooterComponent {
       link : "/lives"
     }
   ]
+
+  ngOnInit(): void {
+      this.getSocialMediaNetworks();
+  }
+
+
+  getSocialMediaNetworks(){
+    this.networks = this.utilsService.getSocialMediaNetWorks();
+  }
+
+
 }

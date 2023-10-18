@@ -1,9 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ConvertStringLabelToFontawesomeIconPipe } from 'src/app/shared/pipes/convertStringLabelToFontawesomeIcon/convert-string-label-to-fontawesome-icon.pipe';
-
+import { UtilsService } from 'src/app/shared/services/utils/utils.service';
+import { Network } from 'src/app/shared/models/network';
+import { MessageService } from 'primeng/api';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { ToastModule } from 'primeng/toast';
+import { ContactService } from 'src/app/shared/services/contact/contact.service';
 @Component({
   selector: 'app-contact-form',
   standalone: true,
@@ -11,26 +16,35 @@ import { ConvertStringLabelToFontawesomeIconPipe } from 'src/app/shared/pipes/co
     CommonModule,
     ReactiveFormsModule,
     FontAwesomeModule,
-    ConvertStringLabelToFontawesomeIconPipe
+    ConvertStringLabelToFontawesomeIconPipe,
+    ProgressSpinnerModule,
+    ToastModule
   ],
   templateUrl: './contact-form.component.html',
-  styleUrls: ['./contact-form.component.scss']
+  styleUrls: ['./contact-form.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  providers: [MessageService]
 })
 export class ContactFormComponent implements OnInit {
 
   contactForm !: FormGroup;
   isFormSubmitted = false;
+  isContactFormSubmittedAndNotErrorOnClientSide = false;
 
-  socialMediaList : any;
+  networks !: Network[];
+
   contactWays : any;
 
   constructor(
-    private fb : FormBuilder
+    private fb : FormBuilder,
+    private utilsService: UtilsService,
+    private messageService : MessageService,
+    private contactService : ContactService
   ){}
 
   ngOnInit(): void {
     this.initForm();
-    this.initSocialMedias();
+    this.getSocialMediaNetworks();
     this.initContactWays();
   }
 
@@ -53,35 +67,31 @@ export class ContactFormComponent implements OnInit {
 
     this.isFormSubmitted = true;
 
-    // stop here if form is invalid
     if (this.contactForm.invalid) {
       return;
     }
+
+    this.isContactFormSubmittedAndNotErrorOnClientSide = true;
+
+    this.contactService.sendMail(this.contactForm.value)
+    .subscribe(
+      (result) =>{
+        this.isContactFormSubmittedAndNotErrorOnClientSide = false;
+        this.messageService.add({severity:'success', detail: result.message});
+        this.contactForm.reset();
+      },
+      (err) => {
+        console.log(err);
+        this.isContactFormSubmittedAndNotErrorOnClientSide = false;
+        this.messageService.add({severity:'info', detail: "Il s'est produit une erreur , veuillez re-essayer plus tard ou écrivez-nous en accédant à la page Contact"});
+      }
+    )
+
+    this.isFormSubmitted = false;
   }
 
-  initSocialMedias(){
-    this.socialMediaList = [
-      {
-        source : "../../../../assets/img/social-medias/facebook.png",
-        alt :"Suivez Amore Mio sur facebook",
-        link : ""
-      },
-      {
-        source : "../../../../assets/img/social-medias/instagram.png",
-        alt :"Suivez Amore Mio sur instagram",
-        link : ""
-      },
-      {
-        source : "../../../../assets/img/social-medias/tik-tok.png",
-        alt :"Suivez Amore Mio sur tik-tok",
-        link : ""
-      },
-      {
-        source : "../../../../assets/img/social-medias/twitter.png",
-        alt :"Suivez Amore Mio sur tik-tok",
-        link : ""
-      }
-    ]
+  getSocialMediaNetworks(){
+    this.networks = this.utilsService.getSocialMediaNetWorks();
   }
 
 

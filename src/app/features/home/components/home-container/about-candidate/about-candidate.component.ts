@@ -2,6 +2,7 @@ import { NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Network } from 'src/app/shared/models/network';
+import { UtilsService } from 'src/app/shared/services/utils/utils.service';
 
 @Component({
   selector: 'app-about-candidate',
@@ -18,28 +19,15 @@ export class AboutCandidateComponent implements OnInit {
 
   networks !: Network[];
 
+  constructor( private utilsService: UtilsService){}
+
+
   ngOnInit(): void {
-      this.initNetworks();
+    this.getSocialMediaNetworks();
   }
 
-  initNetworks(){
-    this.networks = [
-      {
-        sourceImg : "../../../assets/img/social-medias/facebook.png",
-        link : "",
-        name : "facebook"
-      },
-      {
-        sourceImg : "../../../assets/img/social-medias/instagram.png",
-        link : "",
-        name : "instagram"
-      },
-      {
-        sourceImg : "../../../assets/img/social-medias/tik-tok.png",
-        link : "",
-        name : "tik tok"
-      }
-    ]
+  getSocialMediaNetworks(){
+    this.networks = this.utilsService.getSocialMediaNetWorks();
   }
 
 }
