@@ -224,10 +224,22 @@
                 align-items: flex-start;
 
                 p{
-                    font-size: 15px;
+                    font-size: 16px;
                     width: 100%;
                     margin-bottom: 15px;
                 }
+            }
+        }
+    }    
+}
+
+@media all and (max-width: 425px){
+    .featured-programs{
+        margin-top: 3rem;
+        .content{
+            h2{
+                font-size: 1.7rem;
+                margin-bottom: 25px;
             }
         }
     }    

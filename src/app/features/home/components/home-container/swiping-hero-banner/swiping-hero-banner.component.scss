@@ -3,7 +3,7 @@ swiper-container{
     width: 100%;
 
     swiper-slide{
-        height: 100vh;
+        height: 100%;
         width: 100%;
         position: relative;
 
@@ -134,18 +134,18 @@ swiper-container{
         }
 
         .first-slide{
-            background-image: url("../../../../../../assets/img/home/main-hero/walking.webp");
+            background-image: url("../../../../../../assets/img/hero-banner/main/walking.webp");
             transform: background-image scaleX(-1);
             background-position: center right;
         }
 
         .second-slide{
-            background-image: url("../../../../../../assets/img/home/main-hero/amoudou-with-crowd.jpeg");
+            background-image: url("../../../../../../assets/img/hero-banner/main/amoudou-with-crowd.jpeg");
             background-position: top center;
         }
 
         .third-slide{
-            background-image: url("../../../../../../assets/img/home/main-hero/sport.jpeg");
+            background-image: url("../../../../../../assets/img/hero-banner/main/sport.jpeg");
             background-position: top center;
         }
     }
@@ -274,10 +274,7 @@ swiper-container{
                         button{
                             padding: 11px 21px;
                             margin: auto;
-                            span{
-                                font-size: 15px;
-                            }
-    
+
                             i{
                                 font-size: 1.1rem;
                             }
@@ -311,4 +308,45 @@ swiper-container{
         }
     }
 }
+}
+
+@media all and (max-width: 630px){
+
+    swiper-container{
+        height: 80vh;
+        swiper-slide{
+    
+            .my-slide{
+                .text-bloc{
+                    .text{
+                        h1{
+                            font-size: 3rem;
+                        }
+    
+                        button{
+                            padding: 10px 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .custom-controls{
+        top: -40px;
+    }
+}
+
+@media all and (max-width: 425px){
+    swiper-container{    
+        swiper-slide{
+            .first-slide{
+                background-position: 88% 0;
+            }
+    
+            .second-slide{
+                background-position: 65% 0;
+            }
+        }
+    }
 }

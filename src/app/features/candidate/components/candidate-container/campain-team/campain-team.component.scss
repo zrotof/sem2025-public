@@ -29,9 +29,10 @@
 
         .team-members{
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             flex-wrap: wrap;
             align-items: flex-start;
+            gap: 2rem;
 
             .member{
                 display: flex;
@@ -84,10 +85,15 @@
 
                 p{
                     text-align: center;
-                    font-weight: 100;
                     font-size: 0.95rem;
                 }
             }
         }
+    }
+}
+
+@media all and (max-width: 425px){
+    .campain-team{
+        margin-top: 3rem;
     }
 }

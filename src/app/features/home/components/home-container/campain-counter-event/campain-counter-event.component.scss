@@ -223,6 +223,7 @@
 
 @media all and (max-width: 490px){
     .campain-counter-event{
+        margin-top: 3rem;
         .content{
             .card{
                 padding: 20px 10px;
@@ -250,7 +251,7 @@
     
                         span{
                             &:first-child{
-                                font-size: 1.3rem;
+                                font-size: 1.4rem;
                             }
         
                             &:last-child{

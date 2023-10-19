@@ -27,7 +27,7 @@ export class HeroBannerService {
     },
     {
       id: "candidat",
-      image : "../../../../../assets/img/home/main-hero/crowd.jpg",
+      image : "../../../../../assets/img/hero-banner/secondary/flags.jpeg",
       title : "Biographie",
       menus : [
         {
@@ -43,7 +43,7 @@ export class HeroBannerService {
     },
     {
       id: "contact",
-      image : "../../../../../assets/img/hero-banner/secondary/contact.jpeg",
+      image : "../../../../../assets/img/hero-banner/secondary/flags.jpeg",
       title : "Contactez-Nous",
       menus : [
         {
@@ -59,7 +59,7 @@ export class HeroBannerService {
     },
     {
       id: "actualites",
-      image : "../../../../../assets/img/hero-banner/secondary/contact.jpeg",
+      image : "../../../../../assets/img/hero-banner/secondary/articles.jpg",
       title : "Dernières Actualités",
       menus : [
         {
@@ -75,7 +75,7 @@ export class HeroBannerService {
     },
     {
       id: "program",
-      image : "../../../../../assets/img/home/main-hero/crowd.jpg",
+      image : "../../../../../assets/img/hero-banner/secondary/crowd.jpg",
       title : "Mon Programme",
       menus : [
         {

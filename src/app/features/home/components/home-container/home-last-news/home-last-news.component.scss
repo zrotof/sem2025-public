@@ -146,9 +146,7 @@
 @media all and (max-width: 768px){
     .home-last-news{
         .content{
-            h2{
-                margin-bottom: 40px;
-    
+            h2{    
                 span{
                     &:first-child{
                         font-size: 2rem;
@@ -169,23 +167,20 @@
 
 @media all and (max-width: 425px){
     .home-last-news{
+        margin-top: 3rem;
         .content{
             h2{    
+                margin-bottom: 25px;
                 span{
                     &:first-child{
-                        font-size: 1.8rem;
+                        font-size: 1.7rem;
                     }
     
                     &:last-child{
-                        font-size: 1.8rem;
+                        font-size: 1.7rem;
                     }
                 }
             }
-
-            p{
-                font-size: 14px;
-            }
-
         }
     }
 }

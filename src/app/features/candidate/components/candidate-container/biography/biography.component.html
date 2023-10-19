@@ -8,7 +8,6 @@
         <div class="biography-elements">
             <ng-container *ngFor="let biography of biographyBlocs ; let i=index">
                 <div class="biography-element" [ngClass]="i%2 === 0 ? 'reverse' : ''">
-                    <img src={{biography.sourceImg}} alt={{biography.altImg}}>
                     <div class="texts">
                         <h3> {{biography.title}} </h3>
                         <ng-container *ngFor="let text of biography.texts">
