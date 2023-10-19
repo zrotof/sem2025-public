@@ -20,9 +20,9 @@ export class FooterComponent implements OnInit {
       name : "App store"
     },
     {
-      sourceImg : "../../../assets/img/apps/play-store.webp",
+      sourceImg : "../../../assets/img/apps/android.webp",
       link : "",
-      name : "Play store"
+      name : "Android"
     }
   ]
 
