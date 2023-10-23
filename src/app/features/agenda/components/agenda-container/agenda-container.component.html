@@ -1,3 +1,17 @@
 <div class="agenda-container">
     <app-secondary-hero [hero]="secondaryHeroBannerData$ | async"></app-secondary-hero>
+    <div class="content my-container">
+        <h2>Cheminons Ensemble Durant La Campagne</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ullam sint eaque. Minus deleniti odit corrupti placeat velit molestiae sed, mollitia distinctio nihil culpa architecto minima iste doloremque fugiat quo!</p>
+        
+        <div class="datas">
+            <div class="left">
+                <app-agenda-menu-items [menuList]="(menus$ | async)!" (menuItemClikedEvent)="getEventsByEventTypeId($event)"></app-agenda-menu-items>
+                <app-agenda-data-list [events]="(eventsByEventTypes$ | async)!"></app-agenda-data-list>
+            </div>
+            <div class="right">
+                <app-agenda-data-next [events]="(nextEvents$ | async)!"></app-agenda-data-next>
+            </div>
+        </div>
+    </div>
 </div>

@@ -89,17 +89,6 @@ export class ProgramsService {
       ]
     },
     {
-      title: "Famille",
-      theme: "famille",
-      link:`${this.linkRoot}famille`,
-      sourceImg: "../../../../assets/img/program/famille.jpeg",
-      texts : [
-        {
-          text : ""
-        }
-      ]
-    },
-    {
       title: "Formation",
       theme: "formation",
       link:`${this.linkRoot}formation`,

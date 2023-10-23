@@ -25,7 +25,6 @@ import { ArticleDetailSideBlockComponent} from './article-detail-side-block/arti
 export class ArticleDetailContainerComponent implements OnInit {
   
   secondaryHeroBannerData$ !: Observable<SecondaryHeroBanner>;
-
   heroBannerId: string = "actualites";
   articleData$ !: Observable<Article>;
   lastArticles$ !: Observable<Article[]>
@@ -56,7 +55,7 @@ export class ArticleDetailContainerComponent implements OnInit {
 
     const heroBannerData : SecondaryHeroBanner = {
         id: "",
-        image : "../../../../../assets/img/hero-banner/secondary/contact.jpeg",
+        image : "../../../../../assets/img/hero-banner/secondary/articles.jpg",
         title : "Dernières Actualités",
         menus : [
           {
@@ -67,7 +66,8 @@ export class ArticleDetailContainerComponent implements OnInit {
           {
             label : "Articles",
             url : "/articles"
-          },{
+          },
+          {
             label : "..."
           }
         ]
@@ -76,7 +76,6 @@ export class ArticleDetailContainerComponent implements OnInit {
       this.secondaryHeroBannerData$ = of(heroBannerData)
     }
   
-
   getArticleContent(id: string): void{
     this.articleData$ = this.blogService.getArticleById(id);
   }

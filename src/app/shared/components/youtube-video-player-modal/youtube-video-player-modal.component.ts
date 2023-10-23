@@ -31,7 +31,8 @@ export class YoutubeVideoPlayerModalComponent implements OnInit {
     const iframe = videoDomIframe.querySelector('iframe');
 
     if(iframe){
-      const url = 'https:'+iframe.getAttribute('src');
+      const srcAttribute = iframe.getAttribute('src');
+      const url = srcAttribute ? srcAttribute :'https:'+srcAttribute;
       this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(url);
     }
     else{

@@ -39,7 +39,7 @@ export class ProgramContainerComponent implements OnInit {
   initAmbassadorBanner() : void {
     this.ambassadorBanner = {
       text : "Passez à l'action et devenez un Ambassadeur de Campagne. Rejoignez notre communauté passionnée, partagez notre vision, soyez le moteur du changement.",
-      image : "../../../../assets/img/home/main-hero/senegal.png",
+      image : "../../../../assets/img/campain-ambassador/senegal.png",
       alt : ''
     }
   }

@@ -5,7 +5,7 @@ import { BlogType } from 'src/app/shared/enums/blog-type';
 import { ConvertTimeZoneToDatePipe } from 'src/app/shared/pipes/convertTimeZoneToDate/convert-timezone-to-date.pipe';
 import { ConvertStringLabelToFontawesomeIconPipe } from 'src/app/shared/pipes/convertStringLabelToFontawesomeIcon/convert-string-label-to-fontawesome-icon.pipe';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ArticleVideoPlayerComponent } from './article-video-player/article-video-player.component';
+import { ArticleVideoPlayerComponent } from '../../../../../shared/components/article-video-player/article-video-player.component';
 
 @Component({
   selector: 'app-article-data',
@@ -23,6 +23,5 @@ import { ArticleVideoPlayerComponent } from './article-video-player/article-vide
 })
 export class ArticleDataComponent {
   @Input() data !: Article;
-  videoTypeEnum = BlogType.Video;
 
 }

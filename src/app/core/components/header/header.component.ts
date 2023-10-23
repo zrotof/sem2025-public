@@ -42,10 +42,13 @@ export class HeaderComponent implements OnInit{
           icon: 'pi pi-user-plus',
           routerLink: '/devenir-ambassadeur-de-campagne'
       },
+/*
       { 
         label: 'Faire Un Don', 
         icon: 'pi pi-heart', 
-        routerLink: '/dons' }
+        routerLink: '/dons' 
+      }
+*/
     ];
   }
   

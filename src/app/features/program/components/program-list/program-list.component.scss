@@ -40,20 +40,75 @@
                 width: 14rem;
                 cursor: pointer;
 
-                img{
-                    object-fit: cover;
-                    object-position: top center;
+                &:hover{
+                    .image-bloc{
+                        .message{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                            width: 90%;
+                            height: 92%;
+                            background-color: #ffffffa1;
+                            backdrop-filter: blur(3px);
+                            -webkit-backdrop-filter: blur(3px);
+                            padding: 15px;
+                            color: #000000;
+                            margin: 0 auto;
+                            border-radius: 7px;
+        
+                            span{
+                                text-align: center;
+                                color: black;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+
+                .image-bloc{
                     width: 100%;
                     height: 18rem;
                     margin-bottom: 10px;
                     border-radius: 7px;
+                    overflow: hidden;
+                    position: relative;
+
+                    img{
+                        object-fit: cover;
+                        object-position: top center;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .message{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 100%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        transition: all 0.5s ease-in-out;
+    
+                        span{
+                            color: transparent;
+                            font-size: 1.2rem;
+                        }
+                    }
                 }
+                
 
                 h4{
                     font-size: 1.3rem;
                     text-align: center;
                     color: var(--project-font-black);
                 }
+
+                
+
+                
             }
         }
     }
@@ -101,7 +156,7 @@
             .programs{
                 .program{
                     width: 14rem;
-                    img{
+                    .image-bloc{
                         height: 16rem;
                     }
                 }
@@ -123,17 +178,23 @@
 
             .programs{
                 gap: 1.5rem 0.5rem;
-                justify-content: space-between;
+                justify-content: space-evenly;
 
                 .program{
                     width: 11rem;
-                    img{
+                    .image-bloc{
                         height: 12rem;
+
+                        .message{
+                            span{
+                                font-size: 1.1rem;
+                            }
+                        }
                     }
 
                     h4{
-                    font-size: 1.1rem;
-                }
+                        font-size: 1rem;
+                    }
                 }
             }
         }
@@ -148,7 +209,7 @@
 
                 .program{
                     width: 250px;
-                    img{
+                    .image-bloc{
                         height: 16rem;
                     }
                 }

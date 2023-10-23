@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { TooltipModule } from 'primeng/tooltip';
 
 @Component({
   selector: 'app-featured-programs',
   standalone: true,
   imports: [
     NgFor,
-    RouterLink
+    NgIf,
+    RouterLink,
+    TooltipModule
   ],
   templateUrl: './featured-programs.component.html',
   styleUrls: ['./featured-programs.component.scss']
@@ -37,6 +40,4 @@ export class FeaturedProgramsComponent {
     }
 
   ]
-
-
 }
