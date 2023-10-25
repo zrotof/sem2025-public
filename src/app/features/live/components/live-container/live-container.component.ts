@@ -32,7 +32,7 @@ import { MessageService } from 'primeng/api';
 
 export class LiveContainerComponent implements OnInit{
 
-  liveStreamingLink = environment.liveStreaming;
+  liveStreamingLink = environment.loopStreaming;
   menusList$ !: Observable<ReplayMenu[]>;
   videoList$ !:Observable<YoutuveVideoItem[]>
   ambassadorBanner !: AmbassadorBanner;
