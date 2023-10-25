@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { interval } from 'rxjs';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-campain-counter-event',
   standalone: true,
   templateUrl: './campain-counter-event.component.html',
-  styleUrls: ['./campain-counter-event.component.scss']
+  styleUrls: ['./campain-counter-event.component.scss'],
+  imports : [
+    RouterLink
+  ]
 })
 export class CampainCounterEventComponent implements OnInit{
 

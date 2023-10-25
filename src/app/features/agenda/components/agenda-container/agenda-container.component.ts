@@ -9,6 +9,7 @@ import { AsyncPipe } from '@angular/common';
 import { SecondaryHeroComponent } from 'src/app/shared/components/secondary-hero/secondary-hero.component';
 import { AgendaService } from 'src/app/shared/services/agenda/agenda.service';
 import { Event } from 'src/app/shared/models/Agenda';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-agenda-container',
@@ -33,15 +34,23 @@ export class AgendaContainerComponent implements OnInit {
 
   constructor(
     private heroService : HeroBannerService,
-    private agendaService : AgendaService
+    private agendaService : AgendaService,
+    private meta: Meta
   ){}
 
   ngOnInit(): void {
+    this.initSeoMetaTags()
     this.getSencondaryHeroBannerData(this.heroBannerId);
     this.getAgendaMenuList();
     this.getNextEvents();
   }
 
+  initSeoMetaTags(): void {
+    this.meta.updateTag({ name: 'title', content: 'Agenda de Campagne' });
+
+    // Update the description meta tag
+    this.meta.updateTag({ name: "description', content: 'Ne manquez aucun évènement ( meeting, interviews, débats télévisés, ...) de votre candidat Amadou BÂ. Retrouvez l'ensemble de son agenda de campagne et suivez de très près sa marche vers la voie de la victoire !" });
+  }
   getSencondaryHeroBannerData(id : string) : void {
     this.secondaryHeroBannerData$ = this.heroService.getSecondaryHeroData(id);
   }

@@ -72,29 +72,13 @@
         app-article-video-player{
             width: 100%;
             height: 100%;
-            
         }
     }
 
     .data{
-        .elementor-widget-container{
-            p{
-                margin-bottom: 10px;
-
-                > strong{
-                    margin-top: 30px;
-                    margin-bottom: 20px;
-                    font-size: 1.3rem;
-                    display: block;
-                }
-
-                > a{
-                    margin: 0 7px;
-                }
-            }
+        p{
+            line-height: 23px;
         }
-
-        
     }
 }
 

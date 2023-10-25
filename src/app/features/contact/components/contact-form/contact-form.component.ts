@@ -100,7 +100,7 @@ export class ContactFormComponent implements OnInit {
       {
         icon: "faPhone",
         label: "Téléphone",
-        info: "+221-78-45-76-90"
+        info: "+221-17-72-84-03-87"
       },
       {
         icon: "faEnvelope",

@@ -42,8 +42,6 @@ export class ArticleContainerComponent implements OnInit{
   }
 
   getBlogArticleList($event:string) : void{
-    console.log("here guys")
-
     const id = $event;
     this.blogItemList$ = this.blogService.getBlogArticlesByRubricId(id);
   }

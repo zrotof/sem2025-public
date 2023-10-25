@@ -154,7 +154,11 @@
           "builder": "@nguniversal/builders:prerender",
           "options": {
             "routes": [
-              "/"
+              "/",
+              "/le-candidat",
+              "/le-programme",
+              "/articles",
+              "/agenda"
             ]
           },
           "configurations": {

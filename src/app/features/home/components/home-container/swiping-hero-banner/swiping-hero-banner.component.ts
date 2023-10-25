@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, CUSTOM_ELEMENTS_SCHEMA, Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, CUSTOM_ELEMENTS_SCHEMA, Component, ElementRef, Inject, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 //import { Navigation, Pagination, Scrollbar, A11y, Mousewheel } from 'swiper/types/modules';
 import { HeroSwiperDirective } from '../../../directives/hero-swiper.directive';
 import { Swiper } from "swiper";
 import { ButtonPrimaryComponent } from 'src/app/shared/components/button-primary/button-primary.component';
 import { RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-swiping-hero-banner',
@@ -25,6 +26,7 @@ export class SwipingHeroBannerComponent implements AfterViewInit{
   swiper !: Swiper;
   @ViewChild('swiperRef') swiperRef: ElementRef | undefined;
   
+  constructor(){}
   public config = {
     slidesPerView: 1,
     loop : true,

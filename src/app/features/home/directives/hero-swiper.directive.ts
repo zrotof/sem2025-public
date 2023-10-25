@@ -1,4 +1,6 @@
-import { AfterViewInit, Directive, ElementRef, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, Inject, Input} from '@angular/core';
+import { PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Directive({
   selector: '[appHeroSwiper]',
@@ -10,15 +12,20 @@ export class HeroSwiperDirective implements AfterViewInit{
 
   @Input('config') config?: any;
 
-  constructor(private el: ElementRef<HTMLElement>) {
+  constructor(
+    private el: ElementRef<HTMLElement>,
+    @Inject(PLATFORM_ID) private platformId: Object
+    ) {
     this.swiperElement = el.nativeElement;
   }
 
   ngAfterViewInit() {
-    const swiper =  Object.assign(this.swiperElement, this.config);
-    
-    // @ts-ignore
-    this.swiperElement.initialize();
+    if (isPlatformBrowser(this.platformId)){
+
+      const swiper =  Object.assign(this.swiperElement, this.config);
+      // @ts-ignore
+      this.swiperElement.initialize();
+    }
   }
 
 }

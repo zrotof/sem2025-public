@@ -2,8 +2,7 @@
     <app-secondary-hero [hero]="secondaryHeroBannerData$ | async"></app-secondary-hero>
     <div class="content my-container">
         <h2>Cheminons Ensemble Durant La Campagne</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ullam sint eaque. Minus deleniti odit corrupti placeat velit molestiae sed, mollitia distinctio nihil culpa architecto minima iste doloremque fugiat quo!</p>
-        
+        <p>Ne manquez aucun évènement ( meeting, interviews, débats télévisés, ...) de votre candidat Amadou BÂ. Retrouvez l'ensemble de son agenda de campagne et suivez de très près sa marche vers la voie de la victoire !</p>
         <div class="datas">
             <div class="left">
                 <app-agenda-menu-items [menuList]="(menus$ | async)!" (menuItemClikedEvent)="getEventsByEventTypeId($event)"></app-agenda-menu-items>
