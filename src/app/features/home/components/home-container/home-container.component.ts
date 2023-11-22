@@ -19,6 +19,7 @@ export class HomeContainerComponent implements OnInit {
   }
 
   getLastNews() : void{
-    this.lastNews$ = this.blogService.getBlogArticlesByRubricId();
+    const queryParams = "limit=7";
+    this.lastNews$ = this.blogService.getBlogArticlesByRubricId(queryParams);
   }
 }

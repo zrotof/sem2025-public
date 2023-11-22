@@ -43,7 +43,6 @@ export class ArticleListMenuComponent implements OnChanges {
 
         if(targetMenu){
 
-
           const index = this.menuList.indexOf(targetMenu);
 
           this.getBlogsByCategoryId(this.targetMenuId, index)

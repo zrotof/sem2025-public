@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Article, ArticleCategory } from '../../models/blog';
-import { Observable, map, tap } from 'rxjs';
+import { Observable, map, of, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { BlogType } from '../../enums/blog-type';
 import { Event } from '../../models/Agenda';
@@ -34,6 +34,8 @@ export class AgendaService {
 
   getEvents( queryParams ?: string) : Observable<Event[]> {
     
+    console.log(queryParams)
+
     return this.http.get<any>(`${this.EventBaseUrl}?${queryParams}`).pipe(
       map(res=> res.data),
       map(res => res.map( (item : any) => {

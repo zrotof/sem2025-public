@@ -1,5 +1,8 @@
+import { NgFor } from '@angular/common';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Network } from 'src/app/shared/models/network';
+import { UtilsService } from 'src/app/shared/services/utils/utils.service';
 
 @Component({
   selector: 'app-nav-small-screen',
@@ -8,16 +11,23 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   standalone : true,
   imports : [
     RouterLinkActive,
-    RouterLink
+    RouterLink,
+    NgFor
   ]
 })
 export class NavSmallScreenComponent implements OnInit {
 
   @Output() onNavigationOnSmallScreenEvent = new EventEmitter<boolean>();
-
-  constructor() { }
+  networks !: Network[] ;
+  
+  constructor( private utilsService: UtilsService) { }
 
   ngOnInit(): void {
+    this.getSocialMediaNetworks();
+  }
+
+  getSocialMediaNetworks(){
+    this.networks = this.utilsService.getSocialMediaNetWorks();
   }
 
   onNavigationClicked(){

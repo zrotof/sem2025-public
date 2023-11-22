@@ -8,9 +8,7 @@
                 <app-agenda-menu-items [menuList]="(menus$ | async)!" (menuItemClikedEvent)="getEventsByEventTypeId($event)"></app-agenda-menu-items>
                 <app-agenda-data-list [events]="(eventsByEventTypes$ | async)!"></app-agenda-data-list>
             </div>
-            <div class="right">
-                <app-agenda-data-next [events]="(nextEvents$ | async)!"></app-agenda-data-next>
-            </div>
+            <app-agenda-data-next [events]="(nextEvents$ | async)!"></app-agenda-data-next>
         </div>
     </div>
 </div>

@@ -27,7 +27,7 @@
                     <small *ngIf="formControls['town'].invalid && isFormSubmitted" class="error-feedback">Renseignez votre ville</small>
                 </div>
     
-                <button type="submit" >
+                <button type="submit" data-aos="fade-bottom" data-aos-duration="700">
                     <ng-container *ngIf="iscampainAmbassadorFormSubmittedAndNotErrorOnClientSide; else defaultText">
                         <p-progressSpinner [style]="{width: '20px', height: '20px'}" strokeWidth="8"></p-progressSpinner>
                     </ng-container>

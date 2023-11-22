@@ -1,5 +1,6 @@
 swiper-container{
     height: 100vh;
+    height: 100svh;
     width: 100%;
 
     swiper-slide{
@@ -148,6 +149,12 @@ swiper-container{
             background-image: url("../../../../../../assets/img/hero-banner/main/sport.jpeg");
             background-position: top center;
         }
+
+        .fourth-slide{
+            background-image: url("../../../../../../assets/img/hero-banner/main/amadou-people-hands.jpeg");
+            background-position: center bottom;
+        }
+
     }
 }
 

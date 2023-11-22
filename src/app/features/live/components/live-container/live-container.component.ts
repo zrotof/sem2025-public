@@ -32,7 +32,7 @@ import { MessageService } from 'primeng/api';
 
 export class LiveContainerComponent implements OnInit{
 
-  liveStreamingLink = environment.loopStreaming;
+  liveStreamingLink = environment.streamingLink;
   menusList$ !: Observable<ReplayMenu[]>;
   videoList$ !:Observable<YoutuveVideoItem[]>
   ambassadorBanner !: AmbassadorBanner;
@@ -72,7 +72,7 @@ export class LiveContainerComponent implements OnInit{
   initAmbassadorBanner() : void {
     this.ambassadorBanner = {
       text : "Passez à l'action et devenez un Ambassadeur de Campagne. Rejoignez notre communauté passionnée, partagez notre vision, soyez le moteur du changement.",
-      image : "../../../../assets/img/campain-ambassador/senegal.png",
+      image : "../../../../assets/img/campain-ambassador/crowd-celebrate-women.jpeg",
       alt : ''
     }
   }

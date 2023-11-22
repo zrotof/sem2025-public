@@ -31,15 +31,9 @@ export class BlogService {
     );
   }
 
-  getBlogArticlesByRubricId( id ?: string) : Observable<Article[]> {
-    
-    let url =this.articleBaseUrl;
+  getBlogArticlesByRubricId( queryParams ?: string) : Observable<Article[]> {
 
-    if(id){
-      url = `${url}?rubricId=${id}`
-    }
-
-    return this.http.get<any>(url).pipe(
+    return this.http.get<any>(`${this.articleBaseUrl}?${queryParams}`).pipe(
       map(res=> res.data),
       map(res => res.map( (item : any) => {
         return{
@@ -75,5 +69,4 @@ export class BlogService {
       })
     )
   }
-
 }

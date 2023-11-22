@@ -81,7 +81,8 @@ export class ArticleDetailContainerComponent implements OnInit {
   }
 
   getLastCreatedArticles() : void {
-    this.lastArticles$ = this.blogService.getBlogArticlesByRubricId();
+    const queryParams= "limit=5"
+    this.lastArticles$ = this.blogService.getBlogArticlesByRubricId(queryParams);
   }
 
   getBlogCategoryList() : void {

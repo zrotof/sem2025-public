@@ -32,14 +32,7 @@
             margin-top: 50px;
 
             .left{
-                width: calc(100% - 450px);
-            }
-
-            .right{
-                border-radius: 7px;
-                padding: 2rem;
-                width: 388px;
-                background-color: var(--project-secondary-color);
+                width: 100%;
             }
 
         }
@@ -53,18 +46,6 @@
     
             h2{
                 font-size: 2.1rem;
-            }
-    
-            .datas{
-    
-                .left{
-                    width: calc(100% - 370px);
-                }
-
-                .right{
-                    padding: 2rem 1.5rem;
-                    width: 325px;
-                }
             }
         }
     }
@@ -85,12 +66,6 @@
                 .left{
                     width: 100%;
                 }
-
-                .right{
-                    padding: 2rem 1.5rem 0 1.5rem;
-                    width: 100%;
-                    margin-bottom: 3rem;
-                }
             }
         }
     }
@@ -109,12 +84,6 @@
             p{
                 font-size: 15px;
                 text-align: center;
-            }
-    
-            .datas{
-                .right{
-                    padding: 1rem 1rem 0 1rem;
-                }
             }
         }
     }
