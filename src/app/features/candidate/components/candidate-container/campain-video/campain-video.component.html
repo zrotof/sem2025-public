@@ -1,14 +1,18 @@
 <div class="campain-video">
     <div class="content my-container">
-        <img src="../../../../../../assets/img/campain-video/video.png"  data-aos="fade-right" data-aos-duration="700">
+        <div class="image-bloc" (click)="onOpenYoutubeVideo()">
+            <button>
+                <fa-icon [icon]=" 'faPlay' | convertStringLabelToFontawesomeIcon "></fa-icon>
+            </button>
+        </div>
         <div class="text"  data-aos="fade-left" data-aos-duration="700">
             <h3>
                 <span>Amadou BÂ</span>
-                <span>Video De Camapagne</span>
+                <span>En Paix Vers La Prospérité Partagée</span>
             </h3>
 
             <p>Restez connectés, et gardez l'écoute sur l'évolution de l'actualité sur la campagne électorale de monsieur Amadou Bâ.</p>
-            <button>
+            <button routerLink="/devenir-ambassadeur-de-campagne">
                 <span>Me Soutenir</span>
                 <i class="pi pi-arrow-up-right"></i>
             </button>

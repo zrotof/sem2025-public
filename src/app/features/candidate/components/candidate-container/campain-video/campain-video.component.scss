@@ -28,13 +28,42 @@
         color: white;
         z-index: 2;
 
-        img{
-            object-fit: cover;
-            object-position: center;
+        .image-bloc{
+            background-image: url('../../../../../../assets/img/candidate/candidature-amadou-ba.png');
             border-radius: 5px;
             width : 500px;
             height: 320px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top center;
             box-shadow: rgba(144, 144, 144, 0.56) 0px 0px 100px 5px;
+            position: relative;
+
+            button{
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background-color: #ffffffc8;
+                border: none;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                transition: all 0.3s ease-in-out;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: var(--project-primary-color);
+                    fa-icon{
+                        color: white;
+                    }
+                }
+
+                fa-icon{
+                    font-size: 3rem;
+                    color: var(--project-primary-color);
+                }
+            }
         }
 
         .text{
@@ -108,7 +137,7 @@
             padding-top: 40px;
             padding-bottom: 40px;
 
-            img{
+            .image-bloc{
                 width : 400px;
                 height: 280px;
             }
@@ -142,7 +171,7 @@
         .content{
             flex-direction: column-reverse;
 
-            img{
+            .image-bloc{
                 margin-top: 40px;
                 height: 230px;
             }
@@ -179,7 +208,7 @@
         .content{
             flex-direction: column-reverse;
 
-            img{
+            .image-bloc{
                 margin-top: 40px;
                 height: 200px;
                 width: 100%;

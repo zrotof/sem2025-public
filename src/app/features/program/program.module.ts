@@ -7,11 +7,13 @@ import { SecondaryHeroComponent } from 'src/app/shared/components/secondary-hero
 import { ProgramListComponent } from './components/program-list/program-list.component';
 import { ProgramDetailsComponent } from './components/program-details/program-details.component';
 import { AmbassadorBannerComponent } from 'src/app/shared/components/ambassador-banner/ambassador-banner.component';
+import { ProgramBlocComponent } from './components/program-bloc/program-bloc.component';
 
 
 @NgModule({
   declarations: [
     ProgramContainerComponent,
+    ProgramBlocComponent,
   ],
   imports: [
     CommonModule,

@@ -17,19 +17,19 @@ export class CandidateContainerComponent implements OnInit {
   
   ambassadorBanner !: AmbassadorBanner;
 
-  campainTeam$ !: Observable<CampainTeam[]>; 
+  //campainTeam$ !: Observable<CampainTeam[]>; 
 
   heroBannerId: string = "candidat";
 
   constructor(
-    private candidateService : CandidateService,
+    //private candidateService : CandidateService,
     private heroService : HeroBannerService
-    ){}
+  ){}
 
   ngOnInit(): void {
     this.getSencondaryHeroBannerData(this.heroBannerId);
     this.initAmbassadorBanner();
-    this.getCampainTeam();
+    //this.getCampainTeam();
   }
 
   getSencondaryHeroBannerData(id : string) : void {
@@ -44,7 +44,9 @@ export class CandidateContainerComponent implements OnInit {
     }
   }
 
+/*
   getCampainTeam() : void{
     this.campainTeam$ = this.candidateService.getCampainTeam();
   }
+*/
 }

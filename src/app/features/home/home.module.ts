@@ -13,6 +13,7 @@ import { AboutCandidateComponent } from './components/home-container/about-candi
 import { FeaturedProgramsComponent } from 'src/app/shared/components/featured-programs/featured-programs.component';
 import { HomePactComponent } from './components/home-container/home-pact/home-pact.component';
 import { HomeLastNewsComponent } from './components/home-container/home-last-news/home-last-news.component';
+import { ProgramBannerComponent } from 'src/app/shared/components/program-banner/program-banner.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HomeLastNewsComponent } from './components/home-container/home-last-new
     HomeCampainAbassadorComponent,
     AboutCandidateComponent,
     HomePactComponent,
-    HomeLastNewsComponent
+    HomeLastNewsComponent,
+    ProgramBannerComponent
   ]
 })
 export class HomeModule { }

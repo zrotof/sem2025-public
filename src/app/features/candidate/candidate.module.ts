@@ -10,6 +10,7 @@ import { FeaturedProgramsComponent } from 'src/app/shared/components/featured-pr
 import { BiographyComponent } from './components/candidate-container/biography/biography.component';
 import { TopAboutComponent } from './components/candidate-container/top-about/top-about.component';
 import { CampainTeamComponent } from './components/candidate-container/campain-team/campain-team.component';
+import { ProgramBannerComponent } from 'src/app/shared/components/program-banner/program-banner.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CampainTeamComponent } from './components/candidate-container/campain-t
     FeaturedProgramsComponent,
     BiographyComponent,
     TopAboutComponent,
-    CampainTeamComponent
+    CampainTeamComponent,
+    ProgramBannerComponent
   ]
 })
 
