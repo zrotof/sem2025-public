@@ -8,8 +8,8 @@ describe('YoutubeVideoPlayerModalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ YoutubeVideoPlayerModalComponent ]
-    })
+    imports: [YoutubeVideoPlayerModalComponent]
+})
     .compileComponents();
   });
 

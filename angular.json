@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "senegal-2024": {
+    "sem-2025": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/senegal-2024/browser",
+            "outputPath": "dist/sem-2025/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -78,10 +78,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "senegal-2024:build:production"
+              "buildTarget": "sem-2025:build:production"
             },
             "development": {
-              "browserTarget": "senegal-2024:build:development"
+              "buildTarget": "sem-2025:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -89,7 +89,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "senegal-2024:build"
+            "buildTarget": "sem-2025:build"
           }
         },
         "test": {
@@ -113,7 +113,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/senegal-2024/server",
+            "outputPath": "dist/sem-2025/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json",
             "inlineStyleLanguage": "scss"
@@ -139,21 +139,21 @@
           "defaultConfiguration": "production"
         },
         "serve-ssr": {
-          "builder": "@nguniversal/builders:ssr-dev-server",
+          "builder": "@angular-devkit/build-angular:ssr-dev-server",
           "configurations": {
             "development": {
-              "browserTarget": "senegal-2024:build:development",
-              "serverTarget": "senegal-2024:server:development"
+              "browserTarget": "sem-2025:build:development",
+              "serverTarget": "sem-2025:server:development"
             },
             "production": {
-              "browserTarget": "senegal-2024:build:production",
-              "serverTarget": "senegal-2024:server:production"
+              "browserTarget": "sem-2025:build:production",
+              "serverTarget": "sem-2025:server:production"
             }
           },
           "defaultConfiguration": "development"
         },
         "prerender": {
-          "builder": "@nguniversal/builders:prerender",
+          "builder": "@angular-devkit/build-angular:prerender",
           "options": {
             "routes": [
               "/",
@@ -165,12 +165,12 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "senegal-2024:build:production",
-              "serverTarget": "senegal-2024:server:production"
+              "browserTarget": "sem-2025:build:production",
+              "serverTarget": "sem-2025:server:production"
             },
             "development": {
-              "browserTarget": "senegal-2024:build:development",
-              "serverTarget": "senegal-2024:server:development"
+              "browserTarget": "sem-2025:build:development",
+              "serverTarget": "sem-2025:server:development"
             }
           },
           "defaultConfiguration": "production"

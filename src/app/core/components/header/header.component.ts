@@ -1,8 +1,12 @@
-import { NgClass } from '@angular/common';
 import { Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild, ViewEncapsulation } from '@angular/core';
-import { ActivatedRoute, ActivationEnd, Router } from '@angular/router';
+import { ActivationEnd, Router } from '@angular/router';
+
+import { NgClass } from '@angular/common';
+
 import { MenuItem, MessageService } from 'primeng/api';
-import { PrimeNgComponentsModule } from 'src/app/shared/modules/prime-ng-components/prime-ng-components.module';
+import { MenuModule } from 'primeng/menu';
+import { DialogModule } from 'primeng/dialog';
+
 import { NavSmallScreenComponent } from '../nav-small-screen/nav-small-screen.component';
 
 @Component({
@@ -14,7 +18,8 @@ import { NavSmallScreenComponent } from '../nav-small-screen/nav-small-screen.co
   providers: [ MessageService ],
   imports:[
     NgClass,
-    PrimeNgComponentsModule,
+    MenuModule,
+    DialogModule,
     NavSmallScreenComponent
   ]
 })

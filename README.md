@@ -1,17 +1,10 @@
-# AngularStarterModuleArchitectureV15
+# This Aim For
 
-The aim of this project is to provide a set of tools and configurations to facilitate the initialization of an Angular project with a module architecture 
+This is the website of the candidate Serge Espoir Matomba, candidate at presidential elections of 2025 of the Cameroon
 
-It use 15.2.9 version
+# How to launch the project
+--> Clone the project (for this you will need credentials token, youy have to ask it to the project developer)
 
-# What is included
+--> Install dependences with npm install
 
-- browser css reset
-- variables.scss (to init css variables)
-- prine ng
-- prine ng icons
-- font awesome (free solid & regular version )
-- Shared module
-- Core module
-- Features modules
-- Angular universal (SSR)
+--> Run the project with ng serve

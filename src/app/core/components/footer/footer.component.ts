@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Network } from 'src/app/shared/models/network';
 import { UtilsService } from 'src/app/shared/services/utils/utils.service';
+import { RouterLink } from '@angular/router';
+import { NgFor } from '@angular/common';
 
 @Component({
-  selector: 'app-footer',
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss']
+    selector: 'app-footer',
+    templateUrl: './footer.component.html',
+    styleUrls: ['./footer.component.scss'],
+    standalone: true,
+    imports: [NgFor, RouterLink]
 })
 export class FooterComponent implements OnInit {
 
