@@ -46,5 +46,4 @@ export class ArticleContainerComponent implements OnInit{
     const queryParams =`rubricId=${id}`;
     this.blogItemList$ = this.blogService.getBlogArticlesByRubricId(queryParams);
   }
-
 }

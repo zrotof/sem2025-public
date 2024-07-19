@@ -29,7 +29,6 @@ export class ArticleDetailSideBlockComponent {
   constructor( private router : Router){}
 
   goToArticlesMenuList(rubricId : string){
-
     const navigationextras : NavigationExtras = {
       state : {
         id: rubricId
